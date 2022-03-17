@@ -1,17 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState } from 'react'
-import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router'
+import styles from '../../styles/Projects.module.css'
 
-const Home: NextPage = () => {
-  const [name, setName] = useState('');
-
-  fetch('/api/hello')
-    .then(r => r.json())
-    .then(data => {
-      // console.log(data.name);
-      setName(data.name);
-    });
+const Projects: NextPage = () => {
+  const router = useRouter()
+  const { slug } = router.query
     
   return (
     <div className={styles.container}>
@@ -22,12 +16,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        Hello, {name} :)
+        at {slug}
         <br />
-        Home
       </main>
     </div>
   )
 }
 
-export default Home
+export default Projects
