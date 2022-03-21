@@ -1,18 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState } from 'react'
 import styles from '../styles/Home.module.scss'
 
-const Home: NextPage = () => {
-  const [name, setName] = useState('');
+export interface HomeData {
+  name: string;
+} 
 
-  fetch('/api/hello')
-    .then(r => r.json())
-    .then(data => {
-      // console.log(data.name);
-      setName(data.name);
-    });
-    
+const Home: NextPage<HomeData> = ({ name }) => {      
   return (
     <div className={styles.container}>
       <Head>
@@ -28,6 +22,14 @@ const Home: NextPage = () => {
       </main>
     </div>
   )
+}
+
+export const getStaticProps: HomeData = () => {
+  return {
+    props: {
+      name: "diego"
+    }
+  }
 }
 
 export default Home
