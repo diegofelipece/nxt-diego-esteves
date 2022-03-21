@@ -1,0 +1,33 @@
+@import '../_variables.scss';
+
+.big_banner {
+  background-color: $primary-color;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 86px;
+
+  &__box {
+    color: $white-color;
+    background-color: $secondary-color;
+    padding: 56px;
+
+    &__title {
+      font-family: $caslon;
+      font-weight: normal;
+      font-size: 76px;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

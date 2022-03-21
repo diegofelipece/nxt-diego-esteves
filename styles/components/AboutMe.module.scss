@@ -1,0 +1,31 @@
+@import '../_variables.scss';
+
+.about_me {
+  background-color: #f2f2f2;
+  padding: 6rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    border-radius: 100%;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    flex-grow: initial;
+    display: flex;
+    min-width: 238px;
+    margin-right: 65px;
+  }
+
+  &__description {
+    width: auto;
+    &__text {
+      font-family: $caslon;
+      font-size: 21px;
+      color: $secondary-color;
+    }
+  }
+}

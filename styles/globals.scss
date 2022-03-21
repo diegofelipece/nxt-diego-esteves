@@ -1,37 +1,37 @@
-// tipography
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono';
+@import "./_variables";
+@import 'normalize.css/normalize.css';
 
-@mixin font-face($family ,$name, $weight, $style) {
+// tipography
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono";
+
+@mixin font-face($family, $name, $weight, $style) {
 	@font-face {
 		font-family: $family;
-		src:
-		  	url('/fonts/' + $name + '.eot?#iefix') format('embedded-opentype'),
-		  	url('/fonts/' + $name + '.otf')  format('opentype'),
-			url('/fonts/' + $name + '.woff') format('woff'),
-			url('/fonts/' + $name + '.ttf')  format('truetype'),
-			url('/fonts/' + $name + '.svg#' + $name + '') format('svg');
+		src: url("/fonts/" + $name + ".eot?#iefix") format("embedded-opentype"),
+			url("/fonts/" + $name + ".otf") format("opentype"), url("/fonts/" + $name + ".woff") format("woff"),
+			url("/fonts/" + $name + ".ttf") format("truetype"), url("/fonts/" + $name + ".svg#" + $name + "") format("svg");
 		font-weight: $weight;
 		font-style: $style;
 	}
 }
 
-@include font-face('ACaslonPro', 'ACaslonPro-Regular', 'normal', 'normal');
-
-$roboto: 'Roboto Mono', monospace;
-$caslon: 'ACaslonPro-Regular', serif;
+@include font-face("ACaslonPro", "ACaslonPro-Regular", "normal", "normal");
 
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: $roboto;
+body,
+main {
+	padding: 0;
+	margin: 0;
+	font-family: $roboto;
+	position: relative;
+	width: 100%;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
