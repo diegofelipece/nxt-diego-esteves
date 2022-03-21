@@ -2,13 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe';
 import BigBanner from '../components/BigBanner';
+import Footer from '../components/Footer';
 import styles from '../styles/pages/Home.module.scss'
 
-export interface HomeData {
-  name: string;
-} 
-
-const Home: NextPage<HomeData> = ({ name }) => {      
+const Home: NextPage = () => {      
   return (
     <div className={styles.container}>
       <Head>
@@ -18,20 +15,10 @@ const Home: NextPage<HomeData> = ({ name }) => {
       <main>
         <BigBanner />
         <AboutMe />
-        Hello, {name} :)
-        <br />
-        Home
+        <Footer />
       </main>
     </div>
   )
-}
-
-export const getStaticProps: HomeData = () => {
-  return {
-    props: {
-      name: "diego"
-    }
-  }
 }
 
 export default Home
