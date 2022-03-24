@@ -1,10 +1,14 @@
-import { Project } from "../../types/Project";
+import { Project, ProjectExerpt } from "../../types/Project";
 
-const example: Project = {
+export const excerpt: ProjectExerpt = {
   slug: 'example',
   title: 'Example project',
   category: 'example category',
   coverImage: '/images/projects/cover-example.jpg'
 };
 
-export default example;
+export const example: Project = {
+  excerpt,
+};
+
+export default excerpt;

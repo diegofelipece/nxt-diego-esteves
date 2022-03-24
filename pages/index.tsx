@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe';
 import BigBanner from '../components/BigBanner';
-import Footer from '../components/Footer';
 import ProjectDetails from '../components/ProjectDetails';
 import styles from '../styles/pages/Home.module.scss'
 import projects from '../data/projects/_index';
@@ -17,8 +16,7 @@ const Home: NextPage = () => {
       <main>
         <BigBanner />
         <AboutMe />
-        {projects.map(project => <ProjectDetails key={project.slug} project={project} />)}
-        <Footer />
+        {projects.map(projectExcerpt => <ProjectDetails key={projectExcerpt.slug} excerpt={projectExcerpt} />)}
       </main>
     </div>
   )

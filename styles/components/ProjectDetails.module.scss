@@ -13,6 +13,18 @@
   align-items: center;
   margin-bottom: 2px;
   padding: 26px 0;
+  position: relative;
+
+  &__expand {
+    background: $tertiary-color;
+    border: none;
+    width: 32px;    
+    height: 32px;    
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
 
   &__box {
     background-color: $white-color;
