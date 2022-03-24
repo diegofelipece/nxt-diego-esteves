@@ -7,8 +7,8 @@ const AboutMe = () => {
     <div className={styles.about_me}>
       <div className={styles.about_me__image}>
         <Image
-          src="/diego.jpg"
-          alt="Picture of the author"
+          src="/images/diego.jpg"
+          alt="Diego Esteves"
           width={238}
           height={238}
         />

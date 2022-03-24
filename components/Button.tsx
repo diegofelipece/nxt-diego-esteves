@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 const Button = ({ label }: ButtonProps) => (
-  <button className={`${styles.button} ${styles['--primary']}`}>{label}</button>
+  <button className={`${styles.button} ${styles['--tertiary']}`}>{label}</button>
 )
 
 export default Button;

@@ -2,11 +2,13 @@
 
 .about_me {
   background-color: $white-color;
-  padding: 6rem;
+  padding: 6rem 1rem;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
+  max-width: 800px;
+  margin: auto;
 
   &__image {
     border-radius: 100%;

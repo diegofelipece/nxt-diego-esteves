@@ -1,0 +1,39 @@
+@import '../_variables.scss';
+
+.project_details {
+  background-color: $secondary-color;
+}
+
+.project_head {
+  background-color: $secondary-color;
+  height: 280px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 26px 0;
+
+  &__box {
+    background-color: $white-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    padding: 1rem;
+
+    &__title {
+      font-family: $caslon;
+      font-weight: normal;
+      font-size: 48px;
+      color: $secondary-color;
+      margin: 0;
+    }
+
+    &__category {
+      font-size: 14px;
+      color: $tertiary-color;
+      margin: 0;
+    }
+  }
+}
