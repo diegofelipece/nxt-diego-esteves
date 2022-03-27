@@ -1,5 +1,8 @@
+import { Block } from "./Block";
+
 export interface Project {
   excerpt: ProjectExerpt;
+  blocks: Block[];
 }
 
 export interface ProjectExerpt {

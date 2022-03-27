@@ -9,6 +9,7 @@ export const excerpt: ProjectExerpt = {
 
 export const example: Project = {
   excerpt,
+  blocks: []
 };
 
 export default excerpt;
