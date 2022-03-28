@@ -1,15 +1,12 @@
 import Image from 'next/image';
-import { useState } from 'react';
 import styles from '../styles/components/ContentBlock.module.scss';
 import { Block } from "../types/Block";
 
-interface ContentBlockProps {
+type Props = {
   block: Block;
 }
 
-const ContentBlock = ({ block }: ContentBlockProps) => {
-  const [ratio, setRatio] = useState(16/9) // default to 16:9
-
+const ContentBlock = ({ block }: Props) => {
   return (
     <div className={styles.content_block}>
       {block.paragraphs ? <div className={styles.content_block__text} dangerouslySetInnerHTML={{__html: block.paragraphs}}></div>: null}
