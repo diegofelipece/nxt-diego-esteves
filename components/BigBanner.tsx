@@ -1,5 +1,6 @@
 import styles from '../styles/components/BigBanner.module.scss';
 import { motion } from "framer-motion"
+import Logo from './Logo';
 
 const BigBanner = () => {
   const images = [
@@ -21,10 +22,7 @@ const BigBanner = () => {
     variants={variants}
     transition={{duration: 1}}>
       <div className={styles.big_banner} style={{backgroundImage: `url(${imageUrl})`}}>  
-        <div className={styles.big_banner__box}>
-          <h1 className={styles.big_banner__box__title}>Diego<br />Esteves</h1>
-          <p className={styles.big_banner__box__subtitle}>designer and developer</p>
-        </div>
+        <Logo size='large'></Logo>
       </div>
     </motion.div>
   );

@@ -1,0 +1,21 @@
+@import "../_variables.scss";
+
+.logo {
+  color: $white-color;
+  background-color: $secondary-color;
+  padding: 56px;
+
+  &__title {
+    font-family: $caslon;
+    font-weight: normal;
+    font-size: 76px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}

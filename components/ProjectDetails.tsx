@@ -7,7 +7,7 @@ import { Project, ProjectExerpt } from '../types/Project';
 import ContentBlock from './ContentBlock';
 
 type Props = {
-  excerpt: ProjectExerpt;
+  excerpt: ProjectExerpt,
 }
 
 const ProjectDetails = ({ excerpt }: Props) => {
@@ -18,10 +18,7 @@ const ProjectDetails = ({ excerpt }: Props) => {
   const [project, setProject] = useState<Project|null>(null);
 
   const onExpandClick = () => {
-    setExpanded(!expanded);
-
-    if (!expanded) return router.push(`/projects/${excerpt.slug}`);
-    router.push('/');
+    setExpanded(true);
   }
 
   useEffect(() => {
@@ -34,13 +31,14 @@ const ProjectDetails = ({ excerpt }: Props) => {
   return (
     <div className={styles.project_details}>
       <motion.div
+        onClick={onExpandClick}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{duration: 0.6}}
         className={styles.project_head}
         style={{backgroundImage: `url(${excerpt.coverImage})`}}>
-        <button className={styles.project_head__expand} onClick={onExpandClick}></button>
+        <button className={styles.project_head__expand}></button>
         <div className={styles.project_head__box}>
           <h3 className={styles.project_head__box__title}>{excerpt.title}</h3>
           <p className={styles.project_head__box__category}>{excerpt.category}</p>
