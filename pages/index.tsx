@@ -2,26 +2,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe';
 import BigBanner from '../components/BigBanner';
-import ProjectDetails from '../components/ProjectDetails';
 import styles from '../styles/pages/Home.module.scss'
-import projects from '../data/projects/_index';
 import { useState } from 'react';
 import { ProjectExerpt } from '../types/Project';
+import ProjectsController from '../components/ProjectsController';
 
 const Home: NextPage = () => {  
   const [activeProject, setActiveProject] = useState<ProjectExerpt|null>(null);
-
-  const onProjectClick = (event: any, excerpt: ProjectExerpt) => {
-    if (activeProject?.slug !== excerpt.slug) {
-      setTimeout(() => {
-        event.target.scrollIntoView({behavior: "smooth", inline: "nearest"});
-        window.history.pushState({}, '', `/projects/${excerpt.slug}`);
-        setTimeout(() => {
-          setActiveProject(excerpt);
-        }, 1000);
-      }, 600);
-    }
-  };
 
   return (
     <div className={styles.container}>
@@ -36,13 +23,7 @@ const Home: NextPage = () => {
             <AboutMe />
           </>
         ) : null}
-        {projects
-          .filter(excerpt => !activeProject ? true : (activeProject.slug === excerpt.slug))
-          .map(projectExcerpt => (
-          <div key={projectExcerpt.slug} onClick={(event) => onProjectClick(event, projectExcerpt)}>
-            <ProjectDetails excerpt={projectExcerpt} />
-          </div>
-        ))}
+        <ProjectsController activeProjectChanged={(excerpt) => setActiveProject(excerpt)}></ProjectsController>
       </main>
     </div>
   )

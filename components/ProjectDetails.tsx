@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { loader } from '../data/projects/_index';
 import styles from '../styles/components/ProjectDetails.module.scss';
 import { Project, ProjectExerpt } from '../types/Project';
@@ -8,17 +8,21 @@ import ContentBlock from './ContentBlock';
 
 type Props = {
   excerpt: ProjectExerpt,
+  expandProject: (elmRef:any) => void,
 }
 
-const ProjectDetails = ({ excerpt }: Props) => {
+const ProjectDetails = ({ excerpt, expandProject }: Props) => {
   const router = useRouter();
   const matchProjects = router.route.match('/projects/'); 
 
   const [expanded, setExpanded] = useState<boolean>(!!matchProjects);
   const [project, setProject] = useState<Project|null>(null);
 
+  const elmRef = useRef(null);
+
   const onExpandClick = () => {
     setExpanded(true);
+    expandProject(elmRef);
   }
 
   useEffect(() => {
@@ -29,16 +33,16 @@ const ProjectDetails = ({ excerpt }: Props) => {
   }, [expanded, project, excerpt]);
 
   return (
-    <div className={styles.project_details}>
+    <div className={styles.project_details} ref={elmRef}>
       <motion.div
-        onClick={onExpandClick}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{duration: 0.6}}
         className={styles.project_head}
         style={{backgroundImage: `url(${excerpt.coverImage})`}}>
-        <button className={styles.project_head__expand}></button>
+        {!expanded ? <div className={styles.project_head__expander} onClick={onExpandClick}></div> : null}
+        <button className={styles.project_head__icon}></button>
         <div className={styles.project_head__box}>
           <h3 className={styles.project_head__box__title}>{excerpt.title}</h3>
           <p className={styles.project_head__box__category}>{excerpt.category}</p>
