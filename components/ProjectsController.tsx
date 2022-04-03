@@ -26,7 +26,7 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
   const showAllProjectsThumbs = () => {
     const result = projects.map((excerpt, index) => ({ index, excerpt }));
     setAlwaysExpanded(false);
-    return setVisibleProjects(result);
+    setVisibleProjects(result);
   };
 
   useEffect(() => {
@@ -35,8 +35,8 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
     };
 
     const result = projects
-      .filter(excerpt => initialProject.slug === excerpt.slug)
-      .map((excerpt, index) => ({ index, excerpt }));
+      .map((excerpt, index) => ({ index, excerpt }))
+      .filter(({excerpt}) => initialProject.slug === excerpt.slug);
 
     setAlwaysExpanded(true);
     return setVisibleProjects(result);
@@ -62,20 +62,28 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
       const end = document.body.offsetHeight - window.innerHeight; 
       const depth = Math.round(window.innerHeight / 2); 
       const hitTheBottom = window.scrollY >= (end - depth)
-      console.log('hitTheBottom', hitTheBottom);
       if (hitTheBottom) {
-        // const nextProjectIndex = (activeIndex + 1) === projects.length ? 0 : activeIndex + 1;
-        // console.log('nextProjectIndex', nextProjectIndex);
-        // const next = projects[nextProjectIndex];
-
-        // setReachedTheBottom(hitTheBottom);
+        const lastVisibleItem = visibleProjects.reverse()[0]; 
+        const nextProjectIndex = lastVisibleItem.index === projects.length - 1 ? 0 : lastVisibleItem.index + 1;
+        const alreadyVisible = !!visibleProjects.find(i => i.index == nextProjectIndex);
+        if (!alreadyVisible) {
+          const excerpt = projects[nextProjectIndex];
+          console.log('nextProj', excerpt);
+          setVisibleProjects([...visibleProjects, {
+            excerpt, 
+            index: nextProjectIndex,
+          }]);
+          setTimeout(() => {
+            setReachedTheBottom(true);
+          }, 1000);
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [reachedTheBottom]);
+  }, [reachedTheBottom, visibleProjects]);
 
   const onReturnToHome = () => {
     router.push('/');
