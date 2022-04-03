@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import { loader } from '../data/projects/_index';
@@ -8,10 +8,11 @@ import ContentBlock from './ContentBlock';
 
 type Props = {
   excerpt: ProjectExerpt,
+  alwaysExpanded?: boolean,
   expandProject: (elmRef:any) => void,
 }
 
-const ProjectDetails = ({ excerpt, expandProject }: Props) => {
+const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
   const router = useRouter();
   const matchProjects = router.route.match('/projects/'); 
 
@@ -32,13 +33,13 @@ const ProjectDetails = ({ excerpt, expandProject }: Props) => {
     }
   }, [expanded, project, excerpt]);
 
+  useEffect(() => {
+    if (alwaysExpanded) setExpanded(true);
+  }, [alwaysExpanded]);
+
   return (
     <div className={styles.project_details} ref={elmRef}>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{duration: 0.6}}
+      <div
         className={styles.project_head}
         style={{backgroundImage: `url(${excerpt.coverImage})`}}>
         {!expanded ? <div className={styles.project_head__expander} onClick={onExpandClick}></div> : null}
@@ -47,21 +48,19 @@ const ProjectDetails = ({ excerpt, expandProject }: Props) => {
           <h3 className={styles.project_head__box__title}>{excerpt.title}</h3>
           <p className={styles.project_head__box__category}>{excerpt.category}</p>
         </div>
-      </motion.div>
-      <AnimatePresence>
-        {expanded ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{duration: 0.6}}
-            className={styles.project_body}>
-            {project ? (
-              project.blocks.map((block, i) => <ContentBlock key={`block_${i}`} block={block}></ContentBlock>)                  
-            ) : null}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      </div>
+      {expanded ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{duration: 0.6}}
+          className={styles.project_body}>
+          {project ? (
+            project.blocks.map((block, i) => <ContentBlock key={`block_${i}`} block={block}></ContentBlock>)                  
+          ) : null}
+        </motion.div>
+      ) : null}
     </div>
   );
 }

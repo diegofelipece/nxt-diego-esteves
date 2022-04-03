@@ -16,6 +16,7 @@
   position: relative;
 
   &__expander {
+    position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
@@ -31,7 +32,6 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    cursor: pointer;
   }
 
   &__box {
