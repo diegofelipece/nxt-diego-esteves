@@ -59,6 +59,8 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
 
   useEffect(() => {
     const handleScroll = () => {
+      if (!alwaysExpanded) return;
+
       const end = document.body.offsetHeight - window.innerHeight; 
       const depth = Math.round(window.innerHeight / 2); 
       const hitTheBottom = window.scrollY >= (end - depth)
@@ -83,11 +85,12 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [reachedTheBottom, visibleProjects]);
+  }, [reachedTheBottom, visibleProjects, alwaysExpanded]);
 
   const onReturnToHome = () => {
     router.push('/');
     showAllProjectsThumbs();
+    setAlwaysExpanded(false);
     return resetHome && resetHome();
   };
 
@@ -96,7 +99,7 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
       {alwaysExpanded ? <Logo className={styles.projects_controller__logo} size='small' returnToHome={onReturnToHome} /> : null}
       {visibleProjects.map(({ excerpt, index }) => (
         <ProjectDetails
-          key={`${excerpt.slug}_${new Date().getTime()}`}
+          key={excerpt.slug}
           alwaysExpanded={alwaysExpanded}
           expandProject={(elmRef) => onExpansionRequested(elmRef, excerpt, index)}
           excerpt={excerpt} />

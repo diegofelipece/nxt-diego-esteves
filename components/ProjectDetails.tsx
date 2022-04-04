@@ -18,24 +18,66 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
 
   const [expanded, setExpanded] = useState<boolean>(!!matchProjects);
   const [project, setProject] = useState<Project|null>(null);
-
-  const elmRef = useRef(null);
-
+  
+  const elmRef = useRef<HTMLDivElement>(null);
+  
   const onExpandClick = () => {
     setExpanded(true);
     expandProject(elmRef);
   }
-
+  
   useEffect(() => {
     if (expanded && !project) {
       const project = loader(excerpt.slug);
       setProject(project);
     }
   }, [expanded, project, excerpt]);
-
+  
   useEffect(() => {
     if (alwaysExpanded) setExpanded(true);
   }, [alwaysExpanded]);
+  
+  // const [previousScroll, setPreviousScroll] = useState<number>(0);
+  // const [isOnPageNow, setIsOnPageNow] = useState<boolean>(!!matchProjects);
+  // useEffect(() => {
+  //   if (!expanded) return;
+  //   const handleScroll = () => {
+  //     const goinDown = previousScroll < window.scrollY;
+  //     const goingUp = previousScroll > window.scrollY;
+
+  //     const elHeight = elmRef?.current?.offsetHeight || 0;
+  //     const visibleDownAfter = document.body.offsetHeight - elHeight - 80;
+  //     // const visibleUpBefore = document.body.offsetHeight - elHeight - 80;
+  //     const currentlyAt = window.scrollY;
+
+  //     if (goinDown) {
+  //       console.log('goinDown');
+  //       if (currentlyAt >= visibleDownAfter) {
+  //         console.log(excerpt.slug);
+  //       }
+  //     }
+
+  //     if (goingUp) {
+  //       console.log('goingUp');
+  //     }
+  //     // console.log(`${excerpt.slug} >>`, {currentlyAt, elHeight});
+  //     // if (currentlyAt >= visibleAfter && currentlyAt < elHeight) {
+  //     // }
+
+  //     // const url = `/projects/${excerpt.slug}`;
+  //     // if (currentlyAt >= visibleAfter && url !== window.history.state.as) {
+  //     //   return window.history.pushState({
+  //     //     ...window.history.state,
+  //     //     as: url,
+  //     //   }, '', url);
+  //     // }
+  //     setPreviousScroll(window.scrollY);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [isOnPageNow, expanded, excerpt.slug, previousScroll]);
 
   return (
     <div className={styles.project_details} ref={elmRef}>
