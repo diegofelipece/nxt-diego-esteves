@@ -1,10 +1,20 @@
 import { Project, ProjectExerpt } from '../../types/Project';
-import { example } from './example';
-import { loremIpsum } from './loremIpsum';
+import { airobot } from './airobot';
+import { cashMe } from './cash-me';
+import { eurisGucciProjects } from './euris-gucci-projects';
+import { eurisShopfullyProjects } from './euris-shopfully-projects';
+import { nexxus } from './nexxus';
+import { mussumIpsum } from './mussum-ipsum';
+import { cbf } from './cbf';
 
 const projects: {[slug: string]: Project} = {
-  [example.excerpt.slug]: example, 
-  [loremIpsum.excerpt.slug]: loremIpsum, 
+  [eurisGucciProjects.excerpt.slug]: eurisGucciProjects, 
+  [eurisShopfullyProjects.excerpt.slug]: eurisShopfullyProjects, 
+  [cashMe.excerpt.slug]: cashMe, 
+  [airobot.excerpt.slug]: airobot, 
+  [mussumIpsum.excerpt.slug]: mussumIpsum, 
+  [nexxus.excerpt.slug]: nexxus, 
+  [cbf.excerpt.slug]: cbf, 
 }
 
 const exerpts: ProjectExerpt[] = Object.values(projects).map(project => project.excerpt);

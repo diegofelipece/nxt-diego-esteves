@@ -2,13 +2,13 @@ import { TextPosition } from "../../types/Block";
 import { Project, ProjectExerpt } from "../../types/Project";
 
 export const excerpt: ProjectExerpt = {
-  slug: 'lorem-ipsum',
-  title: 'Lorem Ipsum',
-  category: 'example category',
-  coverImage: '/images/projects/cover-example.jpg'
+  slug: 'nexxus',
+  title: 'Nexxus UK',
+  category: 'design',
+  coverImage: '/images/projects/cover-nexxus-app.jpg'
 };
 
-export const loremIpsum: Project = {
+export const nexxus: Project = {
   excerpt,
   blocks: [
     {
