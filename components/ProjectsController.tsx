@@ -88,10 +88,9 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
   }, [reachedTheBottom, visibleProjects, alwaysExpanded]);
 
   const onReturnToHome = () => {
-    router.push('/');
     showAllProjectsThumbs();
-    setAlwaysExpanded(false);
-    return resetHome && resetHome();
+    if(resetHome) resetHome();
+    router.push('/');
   };
 
   return (

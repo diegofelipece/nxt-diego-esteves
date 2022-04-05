@@ -34,7 +34,7 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
   }, [expanded, project, excerpt]);
   
   useEffect(() => {
-    if (alwaysExpanded) setExpanded(true);
+    setExpanded(!!alwaysExpanded);
   }, [alwaysExpanded]);
   
   const [isOnPageNow, setIsOnPageNow] = useState<boolean>(!!matchProjects);
