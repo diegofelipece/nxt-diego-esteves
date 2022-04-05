@@ -37,47 +37,28 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
     if (alwaysExpanded) setExpanded(true);
   }, [alwaysExpanded]);
   
-  // const [previousScroll, setPreviousScroll] = useState<number>(0);
-  // const [isOnPageNow, setIsOnPageNow] = useState<boolean>(!!matchProjects);
-  // useEffect(() => {
-  //   if (!expanded) return;
-  //   const handleScroll = () => {
-  //     const goinDown = previousScroll < window.scrollY;
-  //     const goingUp = previousScroll > window.scrollY;
+  const [isOnPageNow, setIsOnPageNow] = useState<boolean>(!!matchProjects);
+  useEffect(() => {
+    if (!expanded) return;
+    const handleScroll = () => {
+      const rect = elmRef?.current?.getBoundingClientRect();
+      const isOnRectRange = !!rect && rect.top <= 0 && rect.bottom > 0;
+      setIsOnPageNow(isOnRectRange);
+      if (isOnRectRange) {
+        const url = `/projects/${excerpt.slug}`;
+        if (url !== window.history.state.as) {
+          return window.history.pushState({
+            ...window.history.state,
+            as: url,
+          }, '', url);
+        }
+      }
+    };
 
-  //     const elHeight = elmRef?.current?.offsetHeight || 0;
-  //     const visibleDownAfter = document.body.offsetHeight - elHeight - 80;
-  //     // const visibleUpBefore = document.body.offsetHeight - elHeight - 80;
-  //     const currentlyAt = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  //     if (goinDown) {
-  //       console.log('goinDown');
-  //       if (currentlyAt >= visibleDownAfter) {
-  //         console.log(excerpt.slug);
-  //       }
-  //     }
-
-  //     if (goingUp) {
-  //       console.log('goingUp');
-  //     }
-  //     // console.log(`${excerpt.slug} >>`, {currentlyAt, elHeight});
-  //     // if (currentlyAt >= visibleAfter && currentlyAt < elHeight) {
-  //     // }
-
-  //     // const url = `/projects/${excerpt.slug}`;
-  //     // if (currentlyAt >= visibleAfter && url !== window.history.state.as) {
-  //     //   return window.history.pushState({
-  //     //     ...window.history.state,
-  //     //     as: url,
-  //     //   }, '', url);
-  //     // }
-  //     setPreviousScroll(window.scrollY);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll, { passive: true });
-
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [isOnPageNow, expanded, excerpt.slug, previousScroll]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOnPageNow, expanded, excerpt.slug]);
 
   return (
     <div className={styles.project_details} ref={elmRef}>

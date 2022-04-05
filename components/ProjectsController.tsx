@@ -65,7 +65,7 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
       const depth = Math.round(window.innerHeight / 2); 
       const hitTheBottom = window.scrollY >= (end - depth)
       if (hitTheBottom) {
-        const lastVisibleItem = visibleProjects.reverse()[0]; 
+        const lastVisibleItem = visibleProjects[visibleProjects.length - 1]; 
         const nextProjectIndex = lastVisibleItem.index === projects.length - 1 ? 0 : lastVisibleItem.index + 1;
         const alreadyVisible = !!visibleProjects.find(i => i.index == nextProjectIndex);
         if (!alreadyVisible) {
