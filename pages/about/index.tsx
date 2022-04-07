@@ -1,8 +1,36 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../../styles/pages/About.module.scss'
+import { motion, useAnimation } from "framer-motion"
+import ContentBlock from '../../components/ContentBlock'
+import { useState } from 'react'
+import { Block } from '../../types/Block'
+import aboutContent from '../../data/about/_index'
+import Logo from '../../components/Logo'
+import { useRouter } from 'next/router'
 
 const About: NextPage = () => {
+  const [content, setContent] = useState<Block[]>([]);
+  const controls = useAnimation();
+  const router = useRouter();
+
+  if (aboutContent.length !== content.length) setContent(aboutContent);
+
+  controls.start({
+    width: "0%",
+    transition: { duration: 0.6, delay: 0.3 },
+  })  
+
+  const onReturnToHome = () => {
+    controls.start({
+      width: "100%",
+      backgroundColor: '#896194',
+      transition: { duration: 0.6 },  
+    }).then(() => {
+      router.push('/');
+    });
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +39,20 @@ const About: NextPage = () => {
       </Head>
 
       <main>
-        about
+        <div className={styles.about_page}>
+          <motion.span
+            animate={controls}
+            className={styles.about_page__layover}></motion.span>
+          <div className={styles.about_page__header}>
+            <Logo className={styles.about_page__header__logo} size='small' returnToHome={onReturnToHome} />
+            <h1 className={styles.about_page__header__title}>About me</h1>
+          </div>
+          <div className={styles.about_page__body}>
+            {content ? (
+              content.map((block, i) => <ContentBlock key={`block_${i}`} block={block}></ContentBlock>)                  
+            ) : null}
+          </div>
+        </div>
       </main>
     </div>
   )
