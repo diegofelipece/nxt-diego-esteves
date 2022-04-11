@@ -65,8 +65,12 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
       <div
         className={styles.project_head}
         style={{backgroundImage: `url(${excerpt.coverImage})`}}>
-        {!expanded ? <div className={styles.project_head__expander} onClick={onExpandClick}></div> : null}
-        <button className={styles.project_head__icon}></button>
+        {!expanded ? <div className={styles.project_head__expander} onClick={onExpandClick}>
+          <div className={styles.project_head__expander__icon}>
+            <span className={styles.project_head__expander__icon__a}></span>
+            <span className={styles.project_head__expander__icon__b }></span>
+          </div>
+        </div> : null}
         <div className={styles.project_head__box}>
           <h3 className={styles.project_head__box__title}>{excerpt.title}</h3>
           <p className={styles.project_head__box__category}>{excerpt.category}</p>

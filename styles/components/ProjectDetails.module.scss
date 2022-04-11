@@ -23,16 +23,55 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
 
-  &__icon {
-    background: $tertiary-color;
-    border: none;
-    width: 32px;    
-    height: 32px;    
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    &:hover &__icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    &__icon {
+      border: none;
+      width: 20px;    
+      height: 20px;    
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  
+      &__a, &__b {
+        &:after, &:before {
+          content: "";
+          position: absolute;
+          height: 25%;
+          width: 25%;
+        }
+      }
+  
+      &__a:after {
+        top: 0;
+        left: 0;
+        border-top: 2px solid $white-color;
+        border-left: 2px solid $white-color;
+      }
+      &__a::before {
+        top: 0;
+        right: 0;
+        border-top: 2px solid $white-color;
+        border-right: 2px solid $white-color;
+      }
+      &__b:after {
+        bottom: 0;
+        left: 0;
+        border-bottom: 2px solid $white-color;
+        border-left: 2px solid $white-color;
+      }
+      &__b::before {
+        bottom: 0;
+        right: 0;
+        border-bottom: 2px solid $white-color;
+        border-right: 2px solid $white-color;
+      }
+    }  
   }
 
   &__box {
