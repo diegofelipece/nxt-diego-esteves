@@ -6,9 +6,9 @@ export enum TextPosition {
 
 export interface ImageProps {
   src: string;
-  alt: string;
-  width: number;
-  heigth: number;
+  alt?: string;
+  width?: number;
+  heigth?: number;
 }
 
 export interface Block {

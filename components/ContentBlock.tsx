@@ -14,9 +14,9 @@ const ContentBlock = ({ block }: Props) => {
         <div className={styles.content_block__image}>
           <Image
             src={block.image.src}
-            alt={block.image.alt}
-            width={block.image.width}
-            height={block.image.heigth}
+            alt={block.image.alt || ''}
+            width={block.image.width || '100%'}
+            height={block.image.heigth || 'auto'}
           />
         </div>
       ) : null}

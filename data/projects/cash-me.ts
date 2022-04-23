@@ -13,53 +13,35 @@ export const cashMe: Project = {
   blocks: [
     {
       paragraphs: `
-        <p>Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! </p>
-        <p>Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-        <p>Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.</p>
+        <p>A Fintech focused on fast and online loans.</p>
+        <p>I’ve acted as Front End developer of the&nbsp;tool/admin (not the WordPress Institutional&nbsp;site), working initially creating static views and after that&nbsp;helping on the implementation of&nbsp;the real views&nbsp;made with Laravel + Vue.js.</p>
+        <p>I’ve joined the project as a freelancer, working for <a href="https://meza1618.com.br/">MeZA,&nbsp;</a>the agency that was responsible for developing the project.</p>
+        <p><small>[ circa 2018/07 ]</small></p>
       `,
       textPosition: TextPosition.full,
     },
     {
-      paragraphs: `<p>
-          Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! <br>
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-          Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.
-        </p>`,
-      textPosition: TextPosition.full,
+      image: {
+        src: '/images/projects/cashme/cashme-mobile.jpeg',
+        width: 800,
+        heigth: 463,
+      }
     },
     {
-      paragraphs: `
-        <p>Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! </p>
-        <p>Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-        <p>Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.</p>
-      `,
-      textPosition: TextPosition.full,
+      image: {
+        src: '/images/projects/cashme/cashme-desk.jpeg',
+        width: 320,
+        heigth: 706,
+      }
     },
     {
-      paragraphs: `<p>
-          Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! <br>
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-          Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.
-        </p>`,
-      textPosition: TextPosition.full,
-    },
-    {
-      paragraphs: `
-        <p>Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! </p>
-        <p>Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-        <p>Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.</p>
-      `,
-      textPosition: TextPosition.full,
-    },
-    {
-      paragraphs: `<p>
-          Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! <br>
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-          Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.
-        </p>`,
-      textPosition: TextPosition.full,
-    },
+      paragraphs: `p><em>PS: Knowing that the pages I did are all visible&nbsp;only on a “</em>restric<em> area”, I’ve left here the link of the first static deliverables. The real&nbsp;ones are now live at <a href="http://cashme.com.br" target="_blank" rel="noopener">cashme.com.br</a></em></p>`
+    }
+  ],
+  links: [
+    'http://cliente.diegoesteves.ink/cash-me/'
   ]
 };
 
 export default excerpt;
+
