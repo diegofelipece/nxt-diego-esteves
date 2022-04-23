@@ -12,30 +12,37 @@ export const cbf: Project = {
   excerpt,
   blocks: [
     {
-      paragraphs: `<p>
-          Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! <br>
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-          Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.
-        </p>`,
+      paragraphs: `
+        <p>
+          I was responsable to redesign the app of the Brazilian Soccer Team sponsered by Vivo. The app has oficial informations about the team, like news, photos, and a game calendar.
+        </p>
+        <p>
+          This job was managed by&nbsp;<a href="http://www.pactodigital.com/" target="_blank" rel="noopener noreferrer">Pactodigital</a>, that invited me to make a whole new art direction fot the app. It was launched for iOS and Android, both avaliable for tablets and smartphones.
+        </p>
+      `,
       textPosition: TextPosition.full,
     },
     {
-      paragraphs: `<p>
-          Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! <br>
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-          Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.
-        </p>`,
+      image: {
+        src: '/images/projects/cbf/selecao-app.jpeg',
+        alt: '',
+        width: 1000,
+        heigth: 653
+      },
       textPosition: TextPosition.full,
     },
+  ],
+  links: [
     {
-      paragraphs: `<p>
-          Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Detraxit consequat et quo num tendi nada.Viva Forevis aptent taciti sociosqu ad litora torquent.Si num tem leite então bota uma pinga aí cumpadi! <br>
-          Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Copo furadis é disculpa de bebadis, arcu quam euismod magna.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. <br>
-          Aenean aliquam molestie leo, vitae iaculis nisl.Per aumento de cachacis, eu reclamis.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.
-        </p>`,
-      textPosition: TextPosition.full,
-    },
+      url: 'https://itunes.apple.com/br/app/selecao/id343628206?mt=8',
+      icon: 'apple'      
+    },    
+    {
+      url: 'https://play.google.com/store/apps/details?id=br.com.mowasports.selecao',
+      icon: 'android'      
+    }
   ]
 };
 
 export default excerpt;
+
