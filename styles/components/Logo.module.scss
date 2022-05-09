@@ -36,17 +36,17 @@
     margin: 0;
     font-size: 46px;
     
-    @include up-breakpoint(md) {
+    @include up-breakpoint(sm) {
       font-size: 76px;
     }
   
     .--small & {
       font-size: 18px;
-
+      
       @include up-breakpoint(sm) {
-        padding: 22px;    
-      }  
-    }
+        font-size: 24px;  
+      }
+    }  
   }
 
   &__subtitle {
