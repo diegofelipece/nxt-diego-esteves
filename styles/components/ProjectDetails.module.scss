@@ -1,4 +1,5 @@
 @import '../_variables.scss';
+@import '../mixins/breakpoints.scss';
 
 .project_details {
   background-color: $white-color;
@@ -85,15 +86,23 @@
     &__title {
       font-family: $caslon;
       font-weight: normal;
-      font-size: 48px;
       color: $secondary-color;
       margin: 0;
+      font-size: 30px;
+      
+      @include up-breakpoint(sm) {
+        font-size: 48px;
+      }
     }
 
     &__category {
-      font-size: 14px;
       color: $tertiary-color;
       margin: 0;
+      font-size: 12px;
+      
+      @include up-breakpoint(sm) {
+        font-size: 14px;
+      }
     }
   }
 }

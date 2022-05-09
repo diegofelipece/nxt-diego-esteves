@@ -1,19 +1,10 @@
 @import "./_variables";
+@import "./mixins/_breakpoints";
+@import "./mixins/font-face";
 @import 'normalize.css/normalize.css';
 
 // tipography
 @import "https://fonts.googleapis.com/css?family=Roboto+Mono";
-
-@mixin font-face($family, $name, $weight, $style) {
-	@font-face {
-		font-family: $family;
-		src: url("/fonts/" + $name + ".eot?#iefix") format("embedded-opentype"),
-			url("/fonts/" + $name + ".otf") format("opentype"), url("/fonts/" + $name + ".woff") format("woff"),
-			url("/fonts/" + $name + ".ttf") format("truetype"), url("/fonts/" + $name + ".svg#" + $name + "") format("svg");
-		font-weight: $weight;
-		font-style: $style;
-	}
-}
 
 @include font-face("ACaslonPro", "ACaslonPro-Regular", "normal", "normal");
 

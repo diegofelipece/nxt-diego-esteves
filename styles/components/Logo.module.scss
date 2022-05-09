@@ -1,13 +1,21 @@
 @import "../_variables.scss";
+@import '../mixins/breakpoints.scss';
 
 .logo {
   color: $white-color;
   background-color: $secondary-color;
-  padding: 56px;
-  position: relative;
+  padding: 36px;
+  
+  @include up-breakpoint(md) {
+    padding: 56px;
+  }
 
   &.--small {
-    padding: 22px;    
+    padding: 10px 16px;    
+
+    @include up-breakpoint(sm) {
+      padding: 22px;    
+    }
   }
 
   &__clickable {
@@ -24,18 +32,30 @@
   &__title {
     font-family: $caslon;
     font-weight: normal;
-    font-size: 76px;
     padding: 0;
     margin: 0;
-
+    font-size: 46px;
+    
+    @include up-breakpoint(md) {
+      font-size: 76px;
+    }
+  
     .--small & {
-      font-size: 22px;
+      font-size: 18px;
+
+      @include up-breakpoint(sm) {
+        padding: 22px;    
+      }  
     }
   }
 
   &__subtitle {
-    font-size: 18px;
     padding: 0;
     margin: 0;
+    font-size: 14px;
+    
+    @include up-breakpoint(md) {
+      font-size: 18px;
+    }
   }
 }

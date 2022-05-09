@@ -1,4 +1,5 @@
 @import '../_variables.scss';
+@import '../mixins/breakpoints.scss';
 
 .about_me {
   background-color: $white-color;
@@ -17,11 +18,15 @@
   &__inner {
     padding: 6rem 1rem;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     max-width: 800px;
     margin: auto;  
+
+    @include up-breakpoint(sm) {
+      flex-flow: row;
+    }
 
     &__image {
       border-radius: 100%;
@@ -31,8 +36,12 @@
       position: relative;
       flex-grow: initial;
       display: flex;
-      min-width: 238px;
-      margin-right: 65px;
+      min-width: 200px;
+      
+      @include up-breakpoint(sm) {
+        min-width: 238px;
+        margin-right: 65px;
+      }
     }
   
     &__description {
