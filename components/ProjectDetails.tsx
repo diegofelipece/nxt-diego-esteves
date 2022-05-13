@@ -5,6 +5,7 @@ import { loader } from '../data/projects/_index';
 import styles from '../styles/components/ProjectDetails.module.scss';
 import { Project, ProjectExerpt } from '../types/Project';
 import ContentBlock from './ContentBlock';
+import LinksList from './LinksList';
 
 type Props = {
   excerpt: ProjectExerpt,
@@ -60,17 +61,6 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isOnPageNow, expanded, excerpt.slug]);
 
-  const listOfLinks = project?.links ? (
-    <ul>
-      {project.links.map((link, i) => {
-        const linkAsString = typeof link === 'string';
-        const linkUrl = linkAsString ? link : link.url; 
-        const icon = !linkAsString && link.icon ? link.icon : 'link'; 
-        return <li key={`${icon}-${i}`}><a href={linkUrl}>{icon}</a></li>;
-      })}
-    </ul>
-  ) : null;
-
   return (
     <div className={styles.project_details} ref={elmRef}>
       <div
@@ -97,7 +87,7 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
           {project ? (
             <>
               {project.blocks.map((block, i) => (<ContentBlock key={`block_${i}`} block={block}></ContentBlock>))}
-              {listOfLinks}
+              <LinksList links={project.links || []}/>
             </>
           ) : null}
         </motion.div>        

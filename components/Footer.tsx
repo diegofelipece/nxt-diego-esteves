@@ -1,25 +1,7 @@
-import {
-  Android,
-  Apple,
-  Behance,
-  Facebook,
-  Github,
-  Link,
-  Linkedin,
-  Tumblr
-} from '../icons';
 import styles from '../styles/components/Footer.module.scss';
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <Android/>
-    <Apple/>
-    <Behance/>
-    <Facebook/>
-    <Github/>
-    <Link/>
-    <Linkedin/>
-    <Tumblr/>
     <ul className={styles.footer__list}>
       <li className={styles.footer__list__item}><a href="https://github.com/diegofelipece/nxt-diego-esteves">{'<source/>'}</a></li>
       <li className={styles.footer__list__item}><a href="https://github.com/diegofelipece">GitHub</a></li>
