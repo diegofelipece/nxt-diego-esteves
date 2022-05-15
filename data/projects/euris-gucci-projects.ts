@@ -5,10 +5,11 @@ export const excerpt: ProjectExerpt = {
   slug: 'euris-gucci-projects',
   title: 'Euris ⨉ Gucci',
   category: 'web development',
-  coverImage: '/images/projects/cover-example.jpg'
+  coverImage: '/images/projects/cover-example.jpg',
 };
 
 export const eurisGucciProjects: Project = {
+  hidden: true,
   excerpt,
   blocks: [
     {

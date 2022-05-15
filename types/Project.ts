@@ -9,6 +9,7 @@ export interface Project {
   excerpt: ProjectExerpt;
   blocks: Block[];
   links?: (ProjectLink|string)[];
+  hidden?: boolean;
 }
 
 export interface ProjectExerpt {

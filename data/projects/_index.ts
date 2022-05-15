@@ -7,15 +7,25 @@ import { nexxus } from './nexxus';
 import { mussumIpsum } from './mussum-ipsum';
 import { cbf } from './cbf';
 
-const projects: {[slug: string]: Project} = {
-  [eurisGucciProjects.excerpt.slug]: eurisGucciProjects, 
-  [eurisShopfullyProjects.excerpt.slug]: eurisShopfullyProjects, 
-  [cashMe.excerpt.slug]: cashMe, 
-  [airobot.excerpt.slug]: airobot, 
-  [mussumIpsum.excerpt.slug]: mussumIpsum, 
-  [nexxus.excerpt.slug]: nexxus, 
-  [cbf.excerpt.slug]: cbf, 
-}
+const projectsArray: Project[]  = [
+  eurisGucciProjects, 
+  eurisShopfullyProjects, 
+  cashMe, 
+  airobot, 
+  mussumIpsum, 
+  nexxus, 
+  cbf, 
+];
+
+const projects: {[slug: string]: Project} = projectsArray.reduce((all, project) => {
+  if (project.hidden) return all;
+  all = { ...all,
+    ...{
+      [project.excerpt.slug]: project
+    }
+  }
+  return all;
+}, {});
 
 const exerpts: ProjectExerpt[] = Object.values(projects).map(project => project.excerpt);
 
