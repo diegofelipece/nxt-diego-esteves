@@ -5,7 +5,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'nexxus',
   title: 'Nexxus UK',
   category: 'design',
-  coverImage: '/images/projects/cover-nexxus-app.jpg'
+  coverImage: '/cover-nexxus-app.jpg'
 };
 
 export const nexxus: Project = {
@@ -24,35 +24,35 @@ export const nexxus: Project = {
     },
     {
       image: {
-        src: '/images/projects/nexxus/section1.jpeg',
+        src: '/nexxus/section1.jpeg',
         width: 1000,
         heigth: 613,
       }
     },
     {
       image: {
-        src: '/images/projects/nexxus/nexxus-app-diagnosis_ipad-Question-1-01-@2x.jpeg',
+        src: '/nexxus/nexxus-app-diagnosis_ipad-Question-1-01-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }
     },
     {
       image: {
-        src: '/images/projects/nexxus/nexxus-app-diagnosis_ipad-Question-7-Select-@2x.jpeg',
+        src: '/nexxus/nexxus-app-diagnosis_ipad-Question-7-Select-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }
     },
     {
       image: {
-        src: '/images/projects/nexxus/nexxus-app-diagnosis_ipad-Question-9-Select-02-@2x.jpeg',
+        src: '/nexxus/nexxus-app-diagnosis_ipad-Question-9-Select-02-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }
     },
     {
       image: {
-        src: '/images/projects/nexxus/nexxus-app-diagnosis_ipad-Result-Sharing-@2x.jpeg',
+        src: '/nexxus/nexxus-app-diagnosis_ipad-Result-Sharing-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }

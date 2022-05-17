@@ -5,7 +5,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'mussum-ipsum',
   title: 'Mussum Ipsum',
   category: 'web development and design',
-  coverImage: '/images/projects/cover-mussum-ipsum.jpg'
+  coverImage: '/cover-mussum-ipsum.jpg'
 };
 
 export const mussumIpsum: Project = {

@@ -13,6 +13,7 @@ const ContentBlock = ({ block }: Props) => {
       {block.image ? (
         <div className={styles.content_block__image}>
           <Image
+            loader={({src}) => `/images/projects/${src}`}
             src={block.image.src}
             alt={block.image.alt || ''}
             width={block.image.width || '100%'}

@@ -65,7 +65,7 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
     <div className={styles.project_details} ref={elmRef}>
       <div
         className={styles.project_head}
-        style={{backgroundImage: `url(${excerpt.coverImage})`}}>
+        style={{backgroundImage: `url(/images/projects/${excerpt.coverImage})`}}>
         {!expanded ? <div className={styles.project_head__expander} onClick={onExpandClick}>
           <div className={styles.project_head__expander__icon}>
             <span className={styles.project_head__expander__icon__a}></span>

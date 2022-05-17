@@ -5,7 +5,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'airobot',
   title: 'Airobot',
   category: 'web development',
-  coverImage: '/images/projects/cover-airobot-app.jpg'
+  coverImage: '/cover-airobot-app.jpg'
 };
 
 export const airobot: Project = {
@@ -22,14 +22,14 @@ export const airobot: Project = {
     },
     {
       image: {
-        src: '/images/projects/airobot/airobot-desk.jpeg',
+        src: '/airobot/airobot-desk.jpeg',
         width: 800,
         heigth: 463,
       }
     },
     {
       image: {
-        src: '/images/projects/airobot/airobot-mobile.jpeg',
+        src: '/airobot/airobot-mobile.jpeg',
         width: 320,
         heigth: 706,
       }

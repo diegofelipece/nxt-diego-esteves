@@ -5,7 +5,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'cbf',
   title: 'CBF app',
   category: 'design',
-  coverImage: '/images/projects/cover-app-selecao.jpg'
+  coverImage: '/cover-app-selecao.jpg'
 };
 
 export const cbf: Project = {
@@ -24,7 +24,7 @@ export const cbf: Project = {
     },
     {
       image: {
-        src: '/images/projects/cbf/selecao-app.jpeg',
+        src: '/cbf/selecao-app.jpeg',
         alt: '',
         width: 1000,
         heigth: 653

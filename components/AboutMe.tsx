@@ -30,7 +30,8 @@ const AboutMe = () => {
       <div className={styles.about_me__inner}>
         <div className={styles.about_me__inner__image}>
           <Image
-            src="/images/diego.jpg"
+            loader={({src}) => `/images/${src}`}
+            src="diego.jpg"
             alt="Diego Esteves"
             width={238}
             height={238}

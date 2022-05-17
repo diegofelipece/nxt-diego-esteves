@@ -5,7 +5,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'euris-gucci-projects',
   title: 'Euris ⨉ Gucci',
   category: 'web development',
-  coverImage: '/images/projects/cover-example.jpg',
+  coverImage: '/cover-example.jpg',
 };
 
 export const eurisGucciProjects: Project = {

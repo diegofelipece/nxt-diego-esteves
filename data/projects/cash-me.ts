@@ -5,7 +5,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'cash-me',
   title: 'Cash.me',
   category: 'web development',
-  coverImage: '/images/projects/cover-cashme-app.jpg'
+  coverImage: '/cover-cashme-app.jpg'
 };
 
 export const cashMe: Project = {
@@ -22,14 +22,14 @@ export const cashMe: Project = {
     },
     {
       image: {
-        src: '/images/projects/cashme/cashme-mobile.jpeg',
+        src: '/cashme/cashme-mobile.jpeg',
         width: 800,
         heigth: 463,
       }
     },
     {
       image: {
-        src: '/images/projects/cashme/cashme-desk.jpeg',
+        src: '/cashme/cashme-desk.jpeg',
         width: 320,
         heigth: 706,
       }
