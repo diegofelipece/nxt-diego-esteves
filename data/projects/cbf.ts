@@ -24,7 +24,7 @@ export const cbf: Project = {
     },
     {
       image: {
-        src: '/cbf/selecao-app.jpeg',
+        src: '/projects/cbf/selecao-app.jpeg',
         alt: '',
         width: 1000,
         heigth: 653

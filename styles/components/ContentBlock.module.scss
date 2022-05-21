@@ -19,4 +19,33 @@
     display: block;
     text-align: center;
   }
+
+  a {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    color: $secondary-color;
+    transition: color 0.4s ease;
+    display: inline-block;
+    
+    &:before {
+      content: '';
+      height: 2px;
+      background: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: height 0.2s ease;
+      width: 100%;
+    }
+    
+    &:hover {
+      color: $primary-color;
+      &:before {
+        background: $secondary-color;
+        height: 1px;
+      }
+    }
+  }
 }

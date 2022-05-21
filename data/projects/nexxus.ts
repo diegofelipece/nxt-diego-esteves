@@ -24,35 +24,35 @@ export const nexxus: Project = {
     },
     {
       image: {
-        src: '/nexxus/section1.jpeg',
+        src: '/projects/nexxus/section1.jpeg',
         width: 1000,
         heigth: 613,
       }
     },
     {
       image: {
-        src: '/nexxus/nexxus-app-diagnosis_ipad-Question-1-01-@2x.jpeg',
+        src: '/projects/nexxus/nexxus-app-diagnosis_ipad-Question-1-01-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }
     },
     {
       image: {
-        src: '/nexxus/nexxus-app-diagnosis_ipad-Question-7-Select-@2x.jpeg',
+        src: '/projects/nexxus/nexxus-app-diagnosis_ipad-Question-7-Select-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }
     },
     {
       image: {
-        src: '/nexxus/nexxus-app-diagnosis_ipad-Question-9-Select-02-@2x.jpeg',
+        src: '/projects/nexxus/nexxus-app-diagnosis_ipad-Question-9-Select-02-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }
     },
     {
       image: {
-        src: '/nexxus/nexxus-app-diagnosis_ipad-Result-Sharing-@2x.jpeg',
+        src: '/projects/nexxus/nexxus-app-diagnosis_ipad-Result-Sharing-@2x.jpeg',
         width: 2049,
         heigth: 1537,
       }

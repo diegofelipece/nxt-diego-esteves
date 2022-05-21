@@ -3,14 +3,37 @@ import { Block, TextPosition } from "../../types/Block";
 const aboutContent: Block[] = [
   {
     paragraphs: `
-      <p>My name is Diego Esteves, I’m from Sao Paulo – Brazil, and I work as a front-end developer and designer.</p>
-      <p>I’ve got a university degree on Advertising, (U. P. Mackenzie – SP/Brazil) and I’ve been working in this area since 2010.</p>
-      <p>It all began with the design. Where I’ve started working with offline media, but quickly I’ve changed my focus to the Web, at those times we used to make Flash websites. Over the years, that neared me from what we call today front-end developer, on the other side I’ve studied illustration as a branch of my design knowledge, which led me to experiment more and start making comics.</p>
-      <p>Over the last 10 years I have worked at some of the largest Brazilians e-commerces, such as Netshoes, B2W Group, and Dafiti, and also at some small design studios in Sao Paulo, Brazil. At 2015 I become a freelancer, activity that allowed me to be more flexible and work between different areas, then finally at 2018, I’ve moved from Sao Paulo (BR) to Bologna (IT), where I’m living since them. At 2019 I’ve started working on Euris, and having a good time as Front End Developer of many React projects.</p>
-      <p>You can find more information about my skills and experience at my Linkedin or even, sending me a “hi” at hello@diegoesteves.ink</p>
+      <p>
+        My name is Diego Esteves, I'm 31 years old, born in São Paulo – Brazil, living at Milan - Italy. At 2012 I've got my university degree on Advertising Design, (<a href="https://www.linkedin.com/school/mackenzie1870">Mackenzie</a> – SP/Brazil) and I've been working as web developer and designer since 2010.
+      </p>
+      <p>
+        To be more specific, it all started with design and advertising, with a considerable focus on web. Back in 2010 the internet was really different from what it looks like today, so I started by making my own blogs and then started working with Flash websites (R.I.P🪦). Slowly I got more into what we call today front-end developer, when I moved from flash to HTML5 websites done mostly with jQuery and WordPress. So for years I worked both as developer and designer for digital and also graphic stuff.
+      </p>
+      <p>
+        On that period I had the opportunity to collaborate with many small design agencies and some of the lead Brazilian e-commerces, like Netshoes, B2W Group, and Dafiti. At 2015 I became freelancer and at some point I stated  diving into Single Page Application's world mainly with React and later Angular. I continued as freelancer until 2018 when I moved to Italy – initially Bologna and then Milan. During that period I had the opportunity to work with many companies and agencies, like Unilever, Nexxus, CuboCC, Itaú, Anglo and many others. At 2019 I started working at Gruppo Euris, which still my current employer, initially for a project with ShopFully and  since 2020/08 I lead a small group of 4 developers for Gucci as external consultants. 
+      </p>
     `,
     textPosition: TextPosition.full,
   },
+  {
+    image: {
+      src: 'self.jpg',
+      heigth: 400,
+      width: 400
+    }
+  },
+  {
+    paragraphs: `
+      <p>
+        As independent comic writer and illustrator, I collaborated with some publications (all in Portuguese): A Última Vez Que Vi Richard (2014), A Vida Marinha (2017) and Agouro (2017). I also participated with the first issue of the maganize Pé de Cabra. You can see them all, and a lot of other stuff, at my old Tumblr, <a href="https://oincriveltediocotidiano.tumblr.com/">O Incrível Tédio Cotidiano</a>.
+      </p>
+      <p>
+        You can find more informations about my skills and experience at my LinkedIn or sending me a “hello” at <a href="mailto:diegofelipece@gmail.com">diegofelipece@gmail.com</a>
+      </p>
+    `,
+    textPosition: TextPosition.full,
+  },
+
 ];
 
 export default aboutContent;

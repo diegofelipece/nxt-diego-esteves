@@ -9,6 +9,7 @@ export const excerpt: ProjectExerpt = {
 };
 
 export const mussumIpsum: Project = {
+   hidden: true,
   excerpt,
   blocks: [
     {
