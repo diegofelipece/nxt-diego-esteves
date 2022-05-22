@@ -1,10 +1,13 @@
 import { Block, TextPosition } from "../../types/Block";
+import { calculateAge } from "../ageHelper";
+
+const age = calculateAge();
 
 const aboutContent: Block[] = [
   {
     paragraphs: `
       <p>
-        My name is Diego Esteves, I'm 31 years old, born in São Paulo – Brazil, living at Milan - Italy. At 2012 I've got my university degree on Advertising Design, (<a href="https://www.linkedin.com/school/mackenzie1870">Mackenzie</a> – SP/Brazil) and I've been working as web developer and designer since 2010.
+        My name is Diego Esteves, I'm ${age} years old, born in São Paulo – Brazil, living at Milan - Italy. At 2012 I've got my university degree on Advertising Design, (<a href="https://www.linkedin.com/school/mackenzie1870">Mackenzie</a> – SP/Brazil) and I've been working as web developer and designer since 2010.
       </p>
       <p>
         To be more specific, it all started with design and advertising, with a considerable focus on web. Back in 2010 the internet was really different from what it looks like today, so I started by making my own blogs and then started working with Flash websites (R.I.P🪦). Slowly I got more into what we call today front-end developer, when I moved from flash to HTML5 websites done mostly with jQuery and WordPress. So for years I worked both as developer and designer for digital and also graphic stuff.

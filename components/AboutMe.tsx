@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import styles from '../styles/components/AboutMe.module.scss';
 import Button from './Button';
 import { motion, useAnimation } from "framer-motion"
+import { calculateAge } from '../data/ageHelper';
 
 const AboutMe = () => {
   const controls = useAnimation();
@@ -22,7 +23,7 @@ const AboutMe = () => {
     })  
   };
 
-  const age =  Math.floor((new Date().getTime() - new Date(1990, 6, 26).getTime()) / (365.25 * 24 * 60 * 60 * 1000));
+  const age = calculateAge();
 
   return (
     <div className={styles.about_me}>
