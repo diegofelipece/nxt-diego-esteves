@@ -1,16 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import ProjectsController from '../../components/ProjectsController'
 import { loader } from '../../data/projects/_index'
 import styles from '../../styles/pages/Projects.module.scss'
 
 const Projects: NextPage = () => {
-  const router = useRouter()
-  const { slug } = router.query;  
-
-  const project = loader(slug as string);
-
+  const project = loader('cash-me');
   return (
     <div className={styles.container}>
       <Head>

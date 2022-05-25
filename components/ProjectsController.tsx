@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { ProjectExerpt } from "../types/Project";
-import projects from '../data/projects/_index';
 import ProjectDetails from "./ProjectDetails";
 import Logo from "./Logo";
 import styles from '../styles/components/ProjectsController.module.scss';
 import { useRouter } from "next/router";
+import exerpts from "../data/projects/_index";
 
 type Props = {
   initialProject?: ProjectExerpt | null,
@@ -24,7 +24,7 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
   const [visibleProjects, setVisibleProjects] = useState<VisibleProject[]>([]);
 
   const showAllProjectsThumbs = () => {
-    const result = projects.map((excerpt, index) => ({ index, excerpt }));
+    const result = exerpts.map((excerpt, index) => ({ index, excerpt }));
     setAlwaysExpanded(false);
     setVisibleProjects(result);
   };
@@ -34,7 +34,7 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
       return showAllProjectsThumbs();
     };
 
-    const result = projects
+    const result = exerpts
       .map((excerpt, index) => ({ index, excerpt }))
       .filter(({excerpt}) => initialProject.slug === excerpt.slug);
 
@@ -66,10 +66,10 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
       const hitTheBottom = window.scrollY >= (end - depth)
       if (hitTheBottom) {
         const lastVisibleItem = visibleProjects[visibleProjects.length - 1]; 
-        const nextProjectIndex = lastVisibleItem.index === projects.length - 1 ? 0 : lastVisibleItem.index + 1;
+        const nextProjectIndex = lastVisibleItem.index === exerpts.length - 1 ? 0 : lastVisibleItem.index + 1;
         const alreadyVisible = !!visibleProjects.find(i => i.index == nextProjectIndex);
         if (!alreadyVisible) {
-          const excerpt = projects[nextProjectIndex];
+          const excerpt = exerpts[nextProjectIndex];
           console.log('nextProj', excerpt);
           setVisibleProjects([...visibleProjects, {
             excerpt, 
