@@ -1,0 +1,42 @@
+@import '../_variables.scss';
+
+.block {
+  font-family: $caslon;
+  font-weight: normal;
+  color: $secondary-color;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  p {
+    margin: 1rem 0;
+  }
+  
+  a {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    color: $secondary-color;
+    transition: color 0.4s ease;
+    display: inline-block;
+    
+    &:before {
+      content: '';
+      height: 2px;
+      background: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: height 0.2s ease;
+      width: 100%;
+    }
+    
+    &:hover {
+      color: $primary-color;
+      &:before {
+        background: $secondary-color;
+        height: 1px;
+      }
+    }
+  }
+}

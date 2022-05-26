@@ -7,7 +7,7 @@ export interface ProjectLink {
 
 export interface Project {
   excerpt: ProjectExerpt;
-  blocks: Block[];
+  content?: JSX.Element;
   links?: (ProjectLink|string)[];
   hidden?: boolean;
 }

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 import { loader } from '../data/projects/_index';
 import styles from '../styles/components/ProjectDetails.module.scss';
 import { Project, ProjectExerpt } from '../types/Project';
-import ContentBlock from './ContentBlock';
 import LinksList from './LinksList';
 
 type Props = {
@@ -84,12 +83,8 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
           exit={{ opacity: 0 }}
           transition={{duration: 0.6}}
           className={styles.project_body}>
-          {project ? (
-            <>
-              {project.blocks.map((block, i) => (<ContentBlock key={`block_${i}`} block={block}></ContentBlock>))}
-              <LinksList links={project.links || []}/>
-            </>
-          ) : null}
+          {project?.content || null}
+          {project?.links ? <LinksList links={project.links || []}/> : null}
         </motion.div>        
       ) : null}
     </div>
