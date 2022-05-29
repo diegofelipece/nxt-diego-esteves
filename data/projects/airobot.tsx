@@ -20,12 +20,12 @@ export const airobot: Project = {
         <p>( ~ 2018/12 )</p>
       </GenericBlock>
       <ImageBlock 
-        src='/projects/airobot/airobot-desk.jpeg'
+        src='/projects/airobot/airobot-desk.png'
         width={800}
         heigth={463}
       />
       <ImageBlock 
-        src='/projects/airobot/airobot-mobile.jpeg'
+        src='/projects/airobot/airobot-mobile.png'
         width={320}
         heigth={706}
       />
