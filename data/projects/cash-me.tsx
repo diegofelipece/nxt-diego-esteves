@@ -1,6 +1,7 @@
-import GenericBlock from "../../components/GenericBlock";
-import ImageBlock from "../../components/ImageBlock";
-import { Project, ProjectExerpt } from "../../types/Project";
+import GenericBlock from '../../components/GenericBlock';
+import ImageBlock from '../../components/ImageBlock';
+import SeoTags from '../../components/SeoTags';
+import { Project, ProjectExerpt } from '../../types/Project';
 
 export const excerpt: ProjectExerpt = {
   slug: 'cash-me',
@@ -13,6 +14,7 @@ export const cashMe: Project = {
   excerpt,
   content: (
     <>
+      <SeoTags pageDescription="Diego Esteves portfolio" pageTitle={excerpt.title} pageSlug={excerpt.slug} />
       <GenericBlock>
         <p>A Fintech focused on fast and online loans.</p>
         <p>I`ve developed the front-end of the tool dashboards, creating static views that later was integrated with Laravel + Vue.js.</p>

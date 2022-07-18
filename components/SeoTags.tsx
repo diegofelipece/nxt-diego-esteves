@@ -21,7 +21,7 @@ const SeoTags = ({ pageTitle, pageDescription, pageSlug = '' }: Props) => {
     <meta property="og:title" content={title} />
     <meta property="og:site_name" content={siteName} />
 
-    <meta property="og:image" content="/diegoesteves.jpg" />
+    <meta property="og:image" content={`${prodUrl}/diegoesteves.jpg`} />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="768" />
     <meta property="og:image:type" content="image/jpg" />

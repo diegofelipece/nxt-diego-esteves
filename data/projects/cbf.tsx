@@ -1,6 +1,7 @@
-import GenericBlock from "../../components/GenericBlock";
-import ImageBlock from "../../components/ImageBlock";
-import { Project, ProjectExerpt } from "../../types/Project";
+import GenericBlock from '../../components/GenericBlock';
+import ImageBlock from '../../components/ImageBlock';
+import SeoTags from '../../components/SeoTags';
+import { Project, ProjectExerpt } from '../../types/Project';
 
 export const excerpt: ProjectExerpt = {
   slug: 'cbf',
@@ -13,6 +14,7 @@ export const cbf: Project = {
   excerpt,
   content: (
     <>
+      <SeoTags pageDescription="Diego Esteves portfolio" pageTitle={excerpt.title} pageSlug={excerpt.slug} />
       <GenericBlock>
         <p>
           I was responsable to redesign the app of the Brazilian Soccer Team sponsered by Vivo. The app has oficial informations about the team, like news, photos, and a game calendar.

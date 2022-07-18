@@ -1,6 +1,7 @@
-import GenericBlock from "../../components/GenericBlock";
-import ImageBlock from "../../components/ImageBlock";
-import { Project, ProjectExerpt } from "../../types/Project";
+import GenericBlock from '../../components/GenericBlock';
+import ImageBlock from '../../components/ImageBlock';
+import SeoTags from '../../components/SeoTags';
+import { Project, ProjectExerpt } from '../../types/Project';
 
 export const excerpt: ProjectExerpt = {
   slug: 'nexxus',
@@ -13,6 +14,7 @@ export const nexxus: Project = {
   excerpt,
   content: (
     <>
+      <SeoTags pageDescription="Diego Esteves portfolio" pageTitle={excerpt.title} pageSlug={excerpt.slug} />
       <GenericBlock>
         <p>
           Design for a Nexxus UK iOS app created for a local marketing action on drugstores. The concept was to create a tool to help the clients on finding the perfect product for their hairs.
