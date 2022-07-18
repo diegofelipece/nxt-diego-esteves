@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import AboutMe from '../components/AboutMe';
 import BigBanner from '../components/BigBanner';
 import styles from '../styles/pages/Home.module.scss'
 import { useState } from 'react';
 import ProjectsController from '../components/ProjectsController';
 import { motion, useAnimation } from "framer-motion"
+import SeoTags from '../components/SeoTags';
 
 const Home: NextPage = () => {  
   const [projectsMode, setProjectsMode] = useState<boolean>(false);
@@ -21,10 +21,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Diego Esteves – portfolio</title>
-        <meta name="description" content="Diego Esteves portfolio" />
-      </Head>
+      <SeoTags pageDescription="Diego Esteves portfolio" pageTitle='Welcome to my portfolio' />
       <main>
         <div className={styles.home_page}>
           {!loaded ? <motion.span
