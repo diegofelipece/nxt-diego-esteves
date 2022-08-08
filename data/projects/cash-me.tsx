@@ -17,8 +17,7 @@ export const cashMe: Project = {
       <SeoTags pageDescription="Diego Esteves portfolio" pageTitle={excerpt.title} pageSlug={excerpt.slug} />
       <GenericBlock>
         <p>A Fintech focused on fast and online loans.</p>
-        <p>I`ve developed the front-end of the tool dashboards, creating static views that later was integrated with Laravel + Vue.js.</p>
-        <p>I`ve joined the project as a freelancer, working for <a href="http://www.meza1618.com.br/" target="_blank" rel="noreferrer">MeZA</a>, the agency that was responsible for developing the project.</p>
+        <p>I implemented the front-end of the tool dashboard, creating static views that later was integrated with Laravel + Vue.js. <br /> I've joined the project as a freelancer, working for <a href="http://www.meza1618.com.br/" target="_blank" rel="noreferrer">MeZA</a>, the agency that was responsible for developing the project.</p>
         <p>( ~ circa 2018/07 )</p>
       </GenericBlock>
       <ImageBlock 

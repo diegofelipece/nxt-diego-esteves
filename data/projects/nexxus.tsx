@@ -17,10 +17,10 @@ export const nexxus: Project = {
       <SeoTags pageDescription="Diego Esteves portfolio" pageTitle={excerpt.title} pageSlug={excerpt.slug} />
       <GenericBlock>
         <p>
-          Design for a Nexxus UK iOS app created for a local marketing action on drugstores. The concept was to create a tool to help the clients on finding the perfect product for their hairs.
+          Design for a Nexxus UK iOS App created for a local marketing action on drugstores. The concept was to create a tool to help the clients on finding the perfect product for their hairs.
         </p>
         <p>
-          Project made as freelacer for <a href="http://www.cubo.cc/" target="_blank" rel="noreferrer">CUBO.CC</a> working with <a href="http://www.raisatrinny.cc/" target="_blank" rel="noreferrer">Raisa Almeida</a> for <a href="https://www.nexxus.com/uk/home.html" target="_blank" rel="noreferrer">Nexxus UK</a>.
+          Project made as freelacer for <a href="http://www.cubo.cc/" target="_blank" rel="noreferrer">CUBO.CC</a> working with <a href="https://www.linkedin.com/in/raisatrinny/" target="_blank" rel="noreferrer">Raisa Almeida</a> for <a href="https://www.nexxus.com/uk/home.html" target="_blank" rel="noreferrer">Nexxus UK</a>.
         </p>
         <p>( ~ circa 2018/07 )</p>
       </GenericBlock>
