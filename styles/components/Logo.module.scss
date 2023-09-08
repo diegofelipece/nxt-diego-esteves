@@ -1,0 +1,61 @@
+@import "../_variables.scss";
+@import '../mixins/breakpoints.scss';
+
+.logo {
+  color: $white-color;
+  background-color: rgba($secondary-color, 0.9);
+  padding: 36px;
+  
+  @include up-breakpoint(md) {
+    padding: 56px;
+  }
+
+  &.--small {
+    padding: 10px 16px;    
+
+    @include up-breakpoint(sm) {
+      padding: 22px;    
+    }
+  }
+
+  &__clickable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;  
+  }
+
+  &__title {
+    font-family: $caslon;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    font-size: 46px;
+    
+    @include up-breakpoint(sm) {
+      font-size: 76px;
+    }
+  
+    .--small & {
+      font-size: 18px;
+      
+      @include up-breakpoint(sm) {
+        font-size: 24px;  
+      }
+    }  
+  }
+
+  &__subtitle {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    
+    @include up-breakpoint(md) {
+      font-size: 18px;
+    }
+  }
+}
