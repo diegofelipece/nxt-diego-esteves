@@ -60,7 +60,7 @@ const About: NextPage = () => {
               width={400} />
             <GenericBlock>
               <p>
-                As an independent comic writer and illustrator, I self published some small histories (all in Portuguese): &quot;A Última Vez Que Vi Richard&quot; (2014), &quot;A Vida Marinha&quot; (2017), and &quot;Agouro&quot; (2017). I also participated in the first issue of the magazine &quot;Pé de Cabra&quot;. You can see them all, and a lot of other stuff, at my old Tumblr, <a href="https://oincriveltediocotidiano.tumblr.com/" target="_blank" rel="noreferrer">O Incrível Tédio Cotidiano</a>.
+                As an independent comic writer and illustrator, I self published some small stories (all in Portuguese): &quot;A Última Vez Que Vi Richard&quot; (2014), &quot;A Vida Marinha&quot; (2017), and &quot;Agouro&quot; (2017). I also participated in the first issue of the magazine &quot;Pé de Cabra&quot;. You can see them all, and a lot of other stuff, at my old Tumblr, <a href="https://oincriveltediocotidiano.tumblr.com/" target="_blank" rel="noreferrer">O Incrível Tédio Cotidiano</a>.
               </p>
               <p>
                 You can find more information about my skills and experience on my LinkedIn or by sending me a “hello” at <a href="mailto:diegofelipece@gmail.com">diegofelipece@gmail.com</a>
