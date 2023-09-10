@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import styles from '../styles/components/AboutMe.module.scss';
 import Button from './Button';
 import { motion, useAnimation } from "framer-motion"
-import { calculateAge } from '../data/ageHelper';
+import { calculateAge } from '../utils/ageHelper';
 
 const AboutMe = () => {
   const controls = useAnimation();

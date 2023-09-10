@@ -1,4 +1,4 @@
-import { Project, ProjectExerpt } from '../../types/Project';
+import { Project, ProjectExerpt } from '../types/Project';
 import { airobot } from './airobot';
 import { cashMe } from './cash-me';
 import { eurisGucciProjects } from './euris-gucci-projects';
