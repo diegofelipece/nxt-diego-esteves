@@ -45,7 +45,7 @@ const About: NextPage = () => {
           <div className={styles.about_page__body}>
             <GenericBlock>
               <p>
-                My name is Diego Esteves, I&apos;m {age} years old, born in São Paulo – Brazil, and living in Milan - Italy. In 2012 I&apos;ve got my university degree in Advertising Design, (<a href="https://www.linkedin.com/school/mackenzie1870" target="_blank" rel="noreferrer">Mackenzie</a> – SP/Brazil) and I&apos;ve been working as a web developer and designer since 2010.
+                My name is Diego Esteves, I&apos;m {age} years old, born in São Paulo – Brazil, and living in Bologna - Italy. In 2012 I&apos;ve got my university degree in Advertising Design, (<a href="https://www.linkedin.com/school/mackenzie1870" target="_blank" rel="noreferrer">Mackenzie</a> – SP/Brazil) and I&apos;ve been working as a web developer and designer since 2010.
               </p>
               <p>
                 To be more specific, it all started with design and advertising, with a considerable focus on the web. Back in 2010, the internet was really different from what it looks like today, so I started by making my own blogs and then started working with Flash websites. Slowly I got more into what we call today front-end development when I moved from Flash to HTML5 websites done mostly with jQuery and WordPress. So, for years, I worked both as a developer and designer for digital and also graphic stuff.
