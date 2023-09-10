@@ -17,7 +17,7 @@ export const getStaticProps = () => {
   return { props: { bigBannerImage } }
 }
 
-const Home: NextPage = ({ bigBannerImage = '' }: Props) => {  
+const Home: NextPage<Props> = ({ bigBannerImage = '' }: Props) => {  
   const [projectsMode, setProjectsMode] = useState<boolean>(false);
   const [loaded, setLoaded] = useState(false);
   const controls = useAnimation();
