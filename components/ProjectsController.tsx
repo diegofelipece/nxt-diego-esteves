@@ -4,7 +4,7 @@ import ProjectDetails from "./ProjectDetails";
 import Logo from "./Logo";
 import styles from '../styles/components/ProjectsController.module.scss';
 import { useRouter } from "next/router";
-import exerpts from "../data/projects/_index";
+import exerpts from "../projects/_index";
 
 type Props = {
   initialProject?: ProjectExerpt | null,

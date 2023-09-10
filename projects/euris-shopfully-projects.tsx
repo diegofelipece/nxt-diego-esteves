@@ -1,4 +1,4 @@
-import { Project, ProjectExerpt } from "../../types/Project";
+import { Project, ProjectExerpt } from "../types/Project";
 
 export const excerpt: ProjectExerpt = {
   slug: 'euris-shopfully-projects',

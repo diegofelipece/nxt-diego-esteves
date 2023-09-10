@@ -1,5 +1,5 @@
 import ProjectsController from '../../components/ProjectsController';
-import { loader } from '../../data/projects/_index';
+import { loader } from '../../projects/_index';
 import styles from '../../styles/pages/Projects.module.scss';
 
 import type { NextPage } from 'next'
