@@ -4,7 +4,7 @@ import styles from '../../styles/pages/About.module.scss'
 import { motion, useAnimation } from "framer-motion"
 import Logo from '../../components/Logo'
 import { useRouter } from 'next/router'
-import { calculateAge } from '../../data/ageHelper'
+import { calculateAge } from '../../utils/ageHelper'
 import GenericBlock from '../../components/GenericBlock'
 import ImageBlock from '../../components/ImageBlock'
 import SeoTags from '../../components/SeoTags'

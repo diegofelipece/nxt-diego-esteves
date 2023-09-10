@@ -1,7 +1,7 @@
-import GenericBlock from '../../components/GenericBlock';
-import ImageBlock from '../../components/ImageBlock';
-import SeoTags from '../../components/SeoTags';
-import { Project, ProjectExerpt } from '../../types/Project';
+import GenericBlock from '../components/GenericBlock';
+import ImageBlock from '../components/ImageBlock';
+import SeoTags from '../components/SeoTags';
+import { Project, ProjectExerpt } from '../types/Project';
 
 export const excerpt: ProjectExerpt = {
   slug: 'cbf',

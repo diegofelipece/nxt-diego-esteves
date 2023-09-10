@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
-import { loader } from '../data/projects/_index';
+import { loader } from '../projects/_index';
 import styles from '../styles/components/ProjectDetails.module.scss';
 import { Project, ProjectExerpt } from '../types/Project';
 import LinksList from './LinksList';

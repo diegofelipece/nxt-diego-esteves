@@ -6,8 +6,18 @@ import { useState } from 'react';
 import ProjectsController from '../components/ProjectsController';
 import { motion, useAnimation } from "framer-motion"
 import SeoTags from '../components/SeoTags';
+import sortBigBannerImage from '../utils/sortBigBannerImage';
 
-const Home: NextPage = () => {  
+type Props = {
+  bigBannerImage?: string,
+}
+
+export const getStaticProps = () => {
+  const bigBannerImage = sortBigBannerImage()
+  return { props: { bigBannerImage } }
+}
+
+const Home: NextPage = ({ bigBannerImage = '' }: Props) => {  
   const [projectsMode, setProjectsMode] = useState<boolean>(false);
   const [loaded, setLoaded] = useState(false);
   const controls = useAnimation();
@@ -29,7 +39,7 @@ const Home: NextPage = () => {
             className={styles.home_page__layover}></motion.span> : null}
           {!projectsMode ? (
             <>
-              <BigBanner />
+              <BigBanner bgUrl={bigBannerImage}/>
               <AboutMe />
             </>
           ) : null}

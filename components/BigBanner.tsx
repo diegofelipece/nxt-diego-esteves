@@ -1,22 +1,12 @@
 import styles from '../styles/components/BigBanner.module.scss';
 import { motion } from "framer-motion"
 import Logo from './Logo';
-import { useState } from 'react';
 
-const images = [
-  '/images/big-banner/mala.jpg',
-  '/images/big-banner/panteao.jpg',
-  '/images/big-banner/sao-paulo.jpg',
-];
+type Props = {
+  bgUrl: string,
+}
 
-const BigBanner = () => {
-  const [bg, setBg] = useState('');
-  
-  if (!bg) {
-    const imageUrl = images[Math.floor(Math.random()*images.length)];
-    setBg(imageUrl);
-  }
-
+const BigBanner = ({ bgUrl }: Props) => {
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -28,7 +18,7 @@ const BigBanner = () => {
     animate="visible"
     variants={variants}
     transition={{duration: 1}}>
-      <div className={styles.big_banner} style={{backgroundImage: `url(${bg})`}}>  
+      <div className={styles.big_banner} style={{backgroundImage: `url(${bgUrl})`}}>  
         <Logo size='large'></Logo>
       </div>
     </motion.div>
