@@ -4,7 +4,7 @@ import styles from '../../styles/pages/Projects.module.scss';
 
 import type { NextPage } from 'next'
 const Projects: NextPage = () => {
-  const project = loader('euris-gucci-projects');
+  const project = loader('gucci-warehouse');
   return (
     <div className={styles.container}>
       <main>
