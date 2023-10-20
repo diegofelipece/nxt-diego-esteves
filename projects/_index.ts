@@ -1,18 +1,16 @@
 import { Project, ProjectExerpt } from '../types/Project';
 import { airobot } from './airobot';
 import { cashMe } from './cash-me';
-import { eurisGucciProjects } from './euris-gucci-projects';
-import { eurisShopfullyProjects } from './euris-shopfully-projects';
+import { gucciWarehouse } from './gucci-warehouse';
 import { nexxus } from './nexxus';
 import { mussumIpsum } from './mussum-ipsum';
 import { cbf } from './cbf';
 
 const projectsArray: Project[]  = [
-  eurisGucciProjects, 
-  eurisShopfullyProjects, 
+  mussumIpsum, 
+  gucciWarehouse, 
   cashMe, 
   airobot, 
-  mussumIpsum, 
   nexxus, 
   cbf, 
 ];
