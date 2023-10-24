@@ -1,7 +1,7 @@
 import { Project, ProjectExerpt } from '../types/Project';
 import { airobot } from './airobot';
 import { cashMe } from './cash-me';
-import { gucciWarehouse } from './gucci-warehouse';
+import { gucciInteractiveVideos } from './gucci-interactive-videos';
 import { nexxus } from './nexxus';
 import { mussumIpsum } from './mussum-ipsum';
 import { cbf } from './cbf';
@@ -9,8 +9,8 @@ import { assentamento } from './assentamento';
 
 const projectsArray: Project[]  = [
   mussumIpsum,
-  gucciWarehouse, 
   assentamento,
+  gucciInteractiveVideos, 
   cashMe, 
   airobot, 
   nexxus, 
