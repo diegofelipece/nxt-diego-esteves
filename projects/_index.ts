@@ -5,10 +5,12 @@ import { gucciWarehouse } from './gucci-warehouse';
 import { nexxus } from './nexxus';
 import { mussumIpsum } from './mussum-ipsum';
 import { cbf } from './cbf';
+import { assentamento } from './assentamento';
 
 const projectsArray: Project[]  = [
-  mussumIpsum, 
+  mussumIpsum,
   gucciWarehouse, 
+  assentamento,
   cashMe, 
   airobot, 
   nexxus, 

@@ -7,7 +7,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'cash-me',
   title: 'Cash.me',
   category: 'web development',
-  coverImage: '/cover-cashme-app.jpg'
+  coverImage: '/cashme/cover.jpg'
 };
 
 export const cashMe: Project = {

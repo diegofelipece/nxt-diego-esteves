@@ -7,7 +7,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'nexxus',
   title: 'Nexxus UK',
   category: 'design',
-  coverImage: '/cover-nexxus-app.jpg'
+  coverImage: '/nexxus/cover.jpg'
 };
 
 export const nexxus: Project = {
