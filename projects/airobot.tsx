@@ -7,7 +7,7 @@ export const excerpt: ProjectExerpt = {
   slug: 'airobot',
   title: 'Airobot',
   category: 'web development',
-  coverImage: '/cover-airobot-app.jpg'
+  coverImage: '/airobot/cover.jpg'
 };
 
 export const airobot: Project = {
