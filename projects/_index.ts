@@ -9,11 +9,11 @@ import { assentamento } from './assentamento';
 
 const projectsArray: Project[]  = [
   mussumIpsum,
-  assentamento,
   gucciInteractiveVideos, 
+  assentamento,
+  nexxus, 
   cashMe, 
   airobot, 
-  nexxus, 
   cbf, 
 ];
 

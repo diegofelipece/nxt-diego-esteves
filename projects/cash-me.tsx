@@ -21,14 +21,14 @@ export const cashMe: Project = {
         <p>( ~ circa 2018/07 )</p>
       </GenericBlock>
       <ImageBlock 
-        src='/projects/cashme/cashme-mobile.jpeg'
-        width={800}
-        heigth={463}
+        src='/projects/cashme/web.jpg'
+        width={1760}
+        heigth={995}
       />
       <ImageBlock 
-        src='/projects/cashme/cashme-desk.jpeg'
+        src='/projects/cashme/smartphone.jpg'
         width={320}
-        heigth={706}
+        heigth={599}
       />
     </>
   ),
