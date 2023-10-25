@@ -6,14 +6,16 @@ import { nexxus } from './nexxus';
 import { mussumIpsum } from './mussum-ipsum';
 import { cbf } from './cbf';
 import { assentamento } from './assentamento';
+import { gucciBrandExperience } from './gucci-brand-experience';
 
 const projectsArray: Project[]  = [
   mussumIpsum,
+  gucciInteractiveVideos,
+  gucciBrandExperience,
   assentamento,
-  gucciInteractiveVideos, 
+  nexxus, 
   cashMe, 
   airobot, 
-  nexxus, 
   cbf, 
 ];
 

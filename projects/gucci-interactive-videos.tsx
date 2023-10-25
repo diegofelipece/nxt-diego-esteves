@@ -11,17 +11,16 @@ export const excerpt: ProjectExerpt = {
 };
 
 export const gucciInteractiveVideos: Project = {
-  // hidden: true,
   excerpt,
   content: (
     <>
       <SeoTags pageDescription="Diego Esteves portfolio" pageTitle={excerpt.title} pageSlug={excerpt.slug} />
       <GenericBlock>
         <p>
-          I was responsible for engineering, designing, and coordinating the creation of a small interactive video platform for Gucci. It is a stand-alone micro front-end piece, thought to be integrated into other brand projects, consisting of two sides: the first is a dashboard for video tagging and upload and the other is a responsive interactive video player.
+          I was responsible for designing, coding, and coordinating the creation of a small interactive video platform for Gucci. It is a stand-alone micro front-end piece, thought to be integrated into other brand projects, consisting of two sides: the first is a dashboard for video tagging and upload and the other is a responsive interactive video player that shows the products visible on the video as they appear.
         </p>
         <p>
-          The idea came from Gucci Project Manager while I was the team leader of a 4 developers squad, working at Euris. We used the stack the client had defined as default: PHP/Lumen/MariaDb for the back end and Angular on the front end.
+          The idea came from Gucci Project Manager while I was the team leader of a 4 developers squad, working at Euris. We worked with PHP/Lumen/MariaDb for the back end and Angular on the front end.
         </p>
         <p>( ~ circa 2022/06 )</p>
       </GenericBlock>
