@@ -1,12 +1,17 @@
+'use client'
+
+import { motion } from "framer-motion";
+import { useMemo } from "react";
 import styles from '../styles/components/BigBanner.module.scss';
-import { motion } from "framer-motion"
+import sortBigBannerImage from '../utils/sortBigBannerImage';
 import Logo from './Logo';
 
 type Props = {
-  bgUrl: string,
 }
 
-const BigBanner = ({ bgUrl }: Props) => {
+const BigBanner = ({}: Props) => {
+  const bgUrl = useMemo(() => sortBigBannerImage(), []);
+
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },

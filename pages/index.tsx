@@ -1,23 +1,16 @@
-import type { NextPage } from 'next'
+import { motion, useAnimation } from "framer-motion";
+import type { NextPage } from 'next';
+import { useState } from 'react';
 import AboutMe from '../components/AboutMe';
 import BigBanner from '../components/BigBanner';
-import styles from '../styles/pages/Home.module.scss'
-import { useState } from 'react';
 import ProjectsController from '../components/ProjectsController';
-import { motion, useAnimation } from "framer-motion"
 import SeoTags from '../components/SeoTags';
-import sortBigBannerImage from '../utils/sortBigBannerImage';
+import styles from '../styles/pages/Home.module.scss';
 
 type Props = {
-  bigBannerImage?: string,
 }
 
-export const getStaticProps = () => {
-  const bigBannerImage = sortBigBannerImage()
-  return { props: { bigBannerImage } }
-}
-
-const Home: NextPage<Props> = ({ bigBannerImage = '' }: Props) => {  
+const Home: NextPage<Props> = ({}: Props) => {  
   const [projectsMode, setProjectsMode] = useState<boolean>(false);
   const [loaded, setLoaded] = useState(false);
   const controls = useAnimation();
@@ -39,7 +32,7 @@ const Home: NextPage<Props> = ({ bigBannerImage = '' }: Props) => {
             className={styles.home_page__layover}></motion.span> : null}
           {!projectsMode ? (
             <>
-              <BigBanner bgUrl={bigBannerImage}/>
+              <BigBanner />
               <AboutMe />
             </>
           ) : null}
