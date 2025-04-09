@@ -1,13 +1,12 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../../styles/pages/About.module.scss'
 import { motion, useAnimation } from "framer-motion"
-import Logo from '../../components/Logo'
+import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { calculateAge } from '../../utils/ageHelper'
 import GenericBlock from '../../components/GenericBlock'
 import ImageBlock from '../../components/ImageBlock'
+import Logo from '../../components/Logo'
 import SeoTags from '../../components/SeoTags'
+import styles from '../../styles/pages/About.module.scss'
+import { calculateAge } from '../../utils/ageHelper'
 
 const age = calculateAge();
 
@@ -45,13 +44,19 @@ const About: NextPage = () => {
           <div className={styles.about_page__body}>
             <GenericBlock>
               <p>
-                My name is Diego Esteves, I&apos;m {age} years old, born in São Paulo – Brazil, and living in Bologna - Italy. In 2012 I&apos;ve got my university degree in Advertising Design, (<a href="https://www.linkedin.com/school/mackenzie1870" target="_blank" rel="noreferrer">Mackenzie</a> – SP/Brazil) and I&apos;ve been working as a web developer and designer since 2010.
+                Hi, I&apos;m Diego Esteves.
               </p>
               <p>
-                To be more specific, it all started with design and advertising, with a considerable focus on the web. Back in 2010, the internet was really different from what it looks like today, so I started by making my own blogs and then started working with Flash websites. Slowly I got more into what we call today front-end development when I moved from Flash to HTML5 websites done mostly with jQuery and WordPress. So, for years, I worked both as a developer and designer for digital and also graphic stuff.
+                I&apos;m {age} years old, born in São Paulo, Brazil, and currently living in Bologna, Italy. I graduated in 2012 with a degree in Advertising Design from <a href="https://www.linkedin.com/school/mackenzie1870" target="_blank" rel="noreferrer">Mackenzie</a> (São Paulo), and I’ve been working as a web designer and developer since 2010.
               </p>
               <p>
-                During that period I had the opportunity to collaborate with many small design agencies and some of the lead Brazilian e-commerces, like Netshoes, B2W Group, and Dafiti. In 2015 I became a freelancer and at some point I started diving into the Single Page Application world, mainly with React and later Angular, and worked with many companies and agencies, like Unilever, Nexxus, CuboCC, Itaú, Anglo, and many others. I continued as a freelancer until 2018 when I moved to Italy – initially Bologna and then Milan. In 2019 I started working at Gruppo Euris where I was external consultant for other companies, initially for ShopFully (until 2020/05) and then leading a small group of 4 developers for Gucci until I left the company in 2022/09 to join Shopfully as a Fullstack Developer (Node/PHP/React), which is my current position. 
+                It all started with design and advertising, with a strong focus on digital. Back in 2010, the internet looked quite different — my first steps were through creating personal blogs and building Flash websites. As the web evolved, I transitioned from Flash to HTML5, jQuery, and WordPress, and gradually moved deeper into what we now call front-end development. For years, I worked across both design and development, in digital and graphic formats.
+              </p>
+              <p>
+                During that time, I had the opportunity to collaborate with small design studios and leading Brazilian e-commerce platforms like Netshoes, the B2W Group, and Dafiti. In 2015, I became a freelancer and began diving into the world of Single Page Applications—primarily using React and later Angular. I worked with companies and agencies such as Unilever, Nexxus, CuboCC, Itaú, Anglo, and others.
+              </p>
+              <p>
+                In 2018, I moved to Italy — first to Bologna, then Milan. The following year, I joined Gruppo Euris, where I worked as an external consultant. I first collaborated with ShopFully (until May 2020), and then led a small team of four developers at Gucci. In September 2022, I left Gruppo Euris and joined ShopFully as a Fullstack Developer (React, Node, PHP), which is my current position.
               </p>
             </GenericBlock>
             <ImageBlock

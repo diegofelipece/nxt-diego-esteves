@@ -65,6 +65,9 @@ export const assentamento: Project = {
     </>
   ),
   links: [
+    {
+      url: 'https://open.spotify.com/intl-pt/album/2Llv2GnyuQ8lGnaw9hXBBy?si=wlmmg77hTDeIIcn1_40LJw'
+    }
   ]
 };
 
