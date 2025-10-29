@@ -65,10 +65,10 @@ const About: NextPage = () => {
               width={400} />
             <GenericBlock>
               <p>
-                As an independent comic writer and illustrator, I’ve self-published a few short stories. In Portuguese: A Última Vez Que Vi Richard (2014), A Vida Marinha (2017), and Agouro (2017); and in Italian: Le Avventure Acquatiche di Stive Sizue (2025) and Forrest Gump (2025). I also contributed to the first issue of the magazine Pé de Cabra (2018), and I’m currently working on new projects.
+                As an independent comic writer and illustrator, I’ve self-published a few short stories. In Portuguese: <i>A Última Vez Que Vi Richard</i> (2014), <i>A Vida Marinha</i> (2017), and <i>Agouro</i> (2017); and in Italian: <i>Le Avventure Acquatiche</i> (2025) and <i>Forrest Gump</i> (2025). I also contributed to the first issue of the magazine <i>Pé de Cabra</i> (2018), and I’m currently working on new projects.
               </p>
               <p>
-                You can find more information about my skills and experience on my LinkedIn or by sending me a “hello” at <a href="mailto:diegofelipece@gmail.com">diegofelipece@gmail.com</a>
+                You can find more information about my skills and experience on my <a href="https://www.linkedin.com/in/diegofelipece/" target="__blank">LinkedIn</a> or by sending me a “hello” at <a href="mailto:diegofelipece@gmail.com">diegofelipece@gmail.com</a>
               </p>
             </GenericBlock>
           </div>
