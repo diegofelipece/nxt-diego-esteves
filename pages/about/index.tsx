@@ -47,16 +47,16 @@ const About: NextPage = () => {
                 Hi, I&apos;m Diego Esteves.
               </p>
               <p>
-                I&apos;m {age} years old, born in São Paulo, Brazil, and currently living in Bologna, Italy. I graduated in 2012 with a degree in Advertising Design from <a href="https://www.linkedin.com/school/mackenzie1870" target="_blank" rel="noreferrer">Mackenzie</a> (São Paulo), and I’ve been working as a web designer and developer since 2010.
+                I&apos;m {age} years old, born in São Paulo, Brazil, and currently based in Bologna, Italy. I graduated in 2012 with a degree in Advertising Design from <a href="https://www.linkedin.com/school/mackenzie1870" target="_blank" rel="noreferrer">Mackenzie University</a> (São Paulo), and I've been working as a web designer and developer since 2010.
               </p>
               <p>
-                It all started with design and advertising, with a strong focus on digital. Back in 2010, the internet looked quite different — my first steps were through creating personal blogs and building Flash websites. As the web evolved, I transitioned from Flash to HTML5, jQuery, and WordPress, and gradually moved deeper into what we now call front-end development. For years, I worked across both design and development, in digital and graphic formats.
+                My career started in design and advertising, with a strong focus on digital media. Back in 2010, the internet looked quite different — my first steps were in creating personal blogs and developing Flash websites. As the web evolved, I transitioned from Flash to HTML5, jQuery, and WordPress, gradually moving deeper into what we now call frontend development. Over the years, I’ve worked across both design and development, covering digital and print formats.
               </p>
               <p>
-                During that time, I had the opportunity to collaborate with small design studios and leading Brazilian e-commerce platforms like Netshoes, the B2W Group, and Dafiti. In 2015, I became a freelancer and began diving into the world of Single Page Applications—primarily using React and later Angular. I worked with companies and agencies such as Unilever, Nexxus, CuboCC, Itaú, Anglo, and others.
+                During that period, I had the opportunity to collaborate with small design studios and leading Brazilian e-commerce platforms such as Netshoes, B2W Group, and Dafiti. In 2015, I began working as a freelancer and immersed myself in the world of Single Page Applications — primarily using React and later Angular. I collaborated with companies and agencies including Unilever, Itaú, Anglo and others.
               </p>
               <p>
-                In 2018, I moved to Italy — first to Bologna, then Milan. The following year, I joined Gruppo Euris, where I worked as an external consultant. I first collaborated with ShopFully (until May 2020), and then led a small team of four developers at Gucci. In September 2022, I left Gruppo Euris and joined ShopFully as a Fullstack Developer (React, Node, PHP), which is my current position.
+                In 2018, I moved to Bologna, Italy. The following year, I joined Gruppo Euris, which initially led me to work with Shopfully as an external Frontend Developer (until May 2020), and later as a Fullstack Developer and Team Leader of a four-person development team at Gucci. In September 2022, I left Gruppo Euris and joined Shopfully as a Fullstack Developer (React, Node, PHP), where I currently work.
               </p>
             </GenericBlock>
             <ImageBlock
@@ -65,7 +65,7 @@ const About: NextPage = () => {
               width={400} />
             <GenericBlock>
               <p>
-                As an independent comic writer and illustrator, I self published some small stories (all in Portuguese): &quot;A Última Vez Que Vi Richard&quot; (2014), &quot;A Vida Marinha&quot; (2017), and &quot;Agouro&quot; (2017). I also participated in the first issue of the magazine &quot;Pé de Cabra&quot;. You can see them all, and a lot of other stuff, at my old Tumblr, <a href="https://oincriveltediocotidiano.tumblr.com/" target="_blank" rel="noreferrer">O Incrível Tédio Cotidiano</a>.
+                As an independent comic writer and illustrator, I’ve self-published a few short stories. In Portuguese: A Última Vez Que Vi Richard (2014), A Vida Marinha (2017), and Agouro (2017); and in Italian: Le Avventure Acquatiche di Stive Sizue (2025) and Forrest Gump (2025). I also contributed to the first issue of the magazine Pé de Cabra (2018), and I’m currently working on new projects.
               </p>
               <p>
                 You can find more information about my skills and experience on my LinkedIn or by sending me a “hello” at <a href="mailto:diegofelipece@gmail.com">diegofelipece@gmail.com</a>
