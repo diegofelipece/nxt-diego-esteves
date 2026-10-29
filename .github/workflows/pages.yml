@@ -3,8 +3,13 @@ name: Deploy portfolio to GitHub Pages
 on:
   push:
     branches:
-      - develop
-      - feat/github-pages-migration
+      - master
+      - 'feature/**'
+      - 'fix/**'
+      - 'chore/**'
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -35,11 +40,11 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ github.ref_name != 'develop' && '/nxt-diego-esteves' || '' }}
+          NEXT_PUBLIC_BASE_PATH: ${{ github.ref_name != 'master' && '/nxt-diego-esteves' || '' }}
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Set custom domain
-        if: github.ref_name == 'develop'
+        if: github.ref_name == 'master'
         run: echo 'diegoesteves.ink' > out/CNAME
 
       - name: Configure GitHub Pages
@@ -51,6 +56,7 @@ jobs:
           path: out
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
