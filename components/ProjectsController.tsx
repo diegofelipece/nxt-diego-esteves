@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import styles from '../styles/components/ProjectsController.module.scss';
 import { useRouter } from "next/router";
 import exerpts from "../projects/_index";
+import sitePath from "../utils/sitePath";
 
 type Props = {
   initialProject?: ProjectExerpt | null,
@@ -45,7 +46,7 @@ const ProjectsController = ({ initialProject, activeProjectChanged, resetHome }:
   const onExpansionRequested = (elmRef: any, excerpt: ProjectExerpt, index: number) => {
     setTimeout(() => {
       elmRef.current.scrollIntoView({ behavior: "smooth", inline: "nearest" });
-      window.history.pushState({}, '', `/projects/${excerpt.slug}`);
+      window.history.pushState({}, '', sitePath(`/projects/${excerpt.slug}/`));
       setTimeout(() => {
         setVisibleProjects([{excerpt, index}]);
         setAlwaysExpanded(true);
