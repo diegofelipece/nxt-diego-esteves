@@ -26,20 +26,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The site is exported to static files in `out/` and deployed to GitHub Pages by
 `.github/workflows/pages.yml`. Pull requests to `master` validate the static
-build without publishing it. Only pushes to `master` publish the site, built
-for the root of `diegoesteves.ink`.
+build without publishing it. Only pushes to `master` publish the site. Until
+the repository Actions variable `PAGES_CUSTOM_DOMAIN` is set to
+`diegoesteves.ink`, the build uses `/nxt-diego-esteves` so the default project
+URL remains functional. Once set, the build uses the custom domain root and
+adds its `CNAME` file.
 
-The workflow adds the custom-domain `CNAME` file only to production builds.
 Before moving DNS away from DigitalOcean, verify the production Pages
-deployment, configure
-the production Pages domain, and update the DNS records. Keep the existing DNS
-values available for rollback until the new domain is confirmed to work.
+deployment, configure the production Pages domain, and update the DNS records.
+Keep the existing DNS values available for rollback until the new domain is
+confirmed to work.
 
 ### DNS cutover
 
 The `diegoesteves.ink` DNS zone currently points to DigitalOcean (`178.62.53.48`).
-After adding and verifying `diegoesteves.ink` in the repository's Pages settings
-and deploying from `master`, update the DNS zone:
+After adding and verifying `diegoesteves.ink` in the repository's Pages settings,
+update the DNS zone:
 
 - Replace the apex (`@`) A record with GitHub Pages' four A records:
   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and
@@ -54,4 +56,8 @@ and deploying from `master`, update the DNS zone:
 Verify the new records with `dig diegoesteves.ink A` and
 `dig www.diegoesteves.ink CNAME`, then enable HTTPS in Pages when it becomes
 available. DNS propagation can take up to 24 hours. Keep the old DigitalOcean
-IP and records noted so they can be restored if rollback is needed.
+IP and records noted so they can be restored if rollback is needed. Once the
+apex records point to GitHub Pages, add the repository Actions variable
+`PAGES_CUSTOM_DOMAIN=diegoesteves.ink` and rerun the `master` deployment. This
+switches the build to root-relative URLs and adds `CNAME`; verify the custom
+domain before retiring the old host.
