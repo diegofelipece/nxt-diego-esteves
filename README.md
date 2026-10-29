@@ -21,3 +21,15 @@ npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Deployment
+
+The site is exported to static files in `out/` and deployed to GitHub Pages by
+`.github/workflows/pages.yml`. Pushes to `feat/github-pages-migration` deploy a
+preview at `https://diegofelipece.github.io/nxt-diego-esteves/`; pushes to
+`develop` build the site for the root of `diegoesteves.ink`.
+
+The workflow adds the custom-domain `CNAME` file only to production builds.
+Before moving DNS away from DigitalOcean, verify the Pages preview and configure
+the production Pages domain and DNS records. Keep the existing DNS values
+available for rollback until the new domain is confirmed to work.

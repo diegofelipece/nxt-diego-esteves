@@ -5,6 +5,7 @@ import { loader } from '../projects/_index';
 import styles from '../styles/components/ProjectDetails.module.scss';
 import { Project, ProjectExerpt } from '../types/Project';
 import LinksList from './LinksList';
+import sitePath from '../utils/sitePath';
 
 type Props = {
   excerpt: ProjectExerpt,
@@ -45,7 +46,7 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
       const isOnRectRange = !!rect && rect.top <= 0 && rect.bottom > 0;
       setIsOnPageNow(isOnRectRange);
       if (isOnRectRange) {
-        const url = `/projects/${excerpt.slug}`;
+        const url = sitePath(`/projects/${excerpt.slug}/`);
         if (url !== window.history.state.as) {
           return window.history.pushState({
             ...window.history.state,
@@ -64,7 +65,7 @@ const ProjectDetails = ({ excerpt, expandProject, alwaysExpanded }: Props) => {
     <div className={styles.project_details} ref={elmRef}>
       <div
         className={styles.project_head}
-        style={{backgroundImage: `url(/images/projects/${excerpt.coverImage})`}}>
+        style={{backgroundImage: `url(${sitePath(`/images/projects/${excerpt.coverImage}`)})`}}>
         {!expanded ? <div className={styles.project_head__expander} onClick={onExpandClick}>
           <div className={styles.project_head__expander__icon}>
             <span className={styles.project_head__expander__icon__a}></span>
