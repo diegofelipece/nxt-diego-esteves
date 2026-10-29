@@ -4,6 +4,7 @@ import styles from '../styles/components/AboutMe.module.scss';
 import Button from './Button';
 import { motion, useAnimation } from "framer-motion"
 import { calculateAge } from '../utils/ageHelper';
+import sitePath from '../utils/sitePath';
 
 const AboutMe = () => {
   const controls = useAnimation();
@@ -33,7 +34,7 @@ const AboutMe = () => {
       <div className={styles.about_me__inner}>
         <div className={styles.about_me__inner__image}>
           <Image
-            loader={({src}) => `/images/${src}`}
+            loader={({src}) => sitePath(`/images/${src}`)}
             src="diego.jpg"
             alt="Diego Esteves"
             width={238}

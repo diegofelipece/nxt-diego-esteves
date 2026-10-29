@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '../styles/components/ImageBlock.module.scss';
+import sitePath from '../utils/sitePath';
 
 type Props = {
   src: string;
@@ -12,7 +13,7 @@ const ImageBlock = ({ src, alt, width, heigth }: Props) => {
   return (
     <div className={styles.image_block}>
       <Image
-        loader={({src}) => `/images/${src}`}
+        loader={({src}) => sitePath(`/images/${src}`)}
         src={src}
         alt={alt || ''}
         width={width || '100%'}
