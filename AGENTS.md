@@ -1,7 +1,7 @@
 # Repository instructions
 
 - Write all documentation and code comments in English.
-- Keep `README.md` as a concise portfolio introduction and contact card, not project documentation.
+- Keep the existing portfolio introduction in `README.md`; do not move project/deployment documentation into it.
 - Put topic-based human- and AI-readable project documentation in `docs/`. Update or add a focused file there when documenting project behavior or operations.
 - Reserve `AGENTS.md` for repository instructions that guide AI coding agents.
 - Use semantic commits (for example, `feat: add project preview` or `fix: correct asset paths`).
