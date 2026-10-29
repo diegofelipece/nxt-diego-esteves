@@ -4,13 +4,9 @@ on:
   push:
     branches:
       - master
-      - 'feature/**'
-      - 'fix/**'
-      - 'chore/**'
   pull_request:
     branches:
       - master
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -44,19 +40,21 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Set custom domain
-        if: github.ref_name == 'master'
+        if: github.ref == 'refs/heads/master'
         run: echo 'diegoesteves.ink' > out/CNAME
 
       - name: Configure GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

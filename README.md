@@ -25,13 +25,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Deployment
 
 The site is exported to static files in `out/` and deployed to GitHub Pages by
-`.github/workflows/pages.yml`. Pushes to `feature/*`, `fix/*`, and `chore/*`
-branches deploy previews at `https://diegofelipece.github.io/nxt-diego-esteves/`;
-pull requests to `master` validate the static build, and pushes to `master`
-build the site for the root of `diegoesteves.ink`.
+`.github/workflows/pages.yml`. Pull requests to `master` validate the static
+build without publishing it. Only pushes to `master` publish the site, built
+for the root of `diegoesteves.ink`.
 
 The workflow adds the custom-domain `CNAME` file only to production builds.
-Before moving DNS away from DigitalOcean, verify the Pages preview, configure
+Before moving DNS away from DigitalOcean, verify the production Pages
+deployment, configure
 the production Pages domain, and update the DNS records. Keep the existing DNS
 values available for rollback until the new domain is confirmed to work.
 
